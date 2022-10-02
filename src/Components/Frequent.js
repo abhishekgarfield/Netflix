@@ -1,3 +1,6 @@
+import { useState } from "react";
+import Pair from "./pair";
+
 const Frequent = () => {
   const data = [
     {
@@ -27,15 +30,17 @@ const Frequent = () => {
   ];
   return (
     <div className="frequent-container">
+      <h1>Frequently Asked Questions</h1>
       {data.map((data, index) => {
-        return (
-          <div key={index} className="pair-cont">
-            <div className="question">{data.q}
-            <i className="fa fa-remove"></i></div>
-            <div className="answer">{data.a}</div>
-          </div>
-        );
+        return <Pair data={data} />;
       })}
+      <h3>
+        Ready to watch? Enter your email to create or restart your membership.
+      </h3>
+      <div className="Email-input">
+        <input type="text" placeholder="Email" />
+        <input type="button" value="Get Startted" />
+      </div>
     </div>
   );
 };

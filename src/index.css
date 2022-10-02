@@ -394,20 +394,69 @@ background-color: black;
   margin: 0.5rem 0rem 0.5rem 0rem ;
   flex-direction: column;
   position: relative;
+
 }
 .question{
-  padding: 10px;
-  font-size: 20px;
-  font-weight: 500;
+  padding: 20px 10px 20px 10px;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
   background-color: rgba(211, 211, 211, 0.274);
+  margin-bottom: 2px;
 }
 .answer
 {
-  padding: 10px;
-  font-size: 20px;
-  font-weight: 500;
+  padding: 20px 10px 20px 10px;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  background-color: rgba(211, 211, 211, 0.274);
+}
+.frequent-container h1{
+  font-size: 55px;
 }
 
-.fa.fa-remove{
-  
+.frequent-container input[type=text] {
+  padding: 15px;
+  flex-grow: 1;
+  font-size: 20px;
+  position: relative;
+}
+
+.frequent-container input[type=button] {
+  padding: 15px;
+  background-color: rgba(229, 9, 20, 255);
+  ;
+  color: white;
+  border: none;
+  font-size: 22px;
+  margin-left: 1px;
+  position: relative;
+}
+
+.frequent-container .label {
+  position: absolute;
+  font-size: 20px;
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.607);
+  transition: 0.3s all;
+}
+
+.Email-input:hover .label {
+  top: 2px;
+  font-size: 12px;
+}
+
+.label:hover {
+  top: 2px;
+  font-size: 12px;
+}
+.frequent-container h3{
+  margin: 5rem 0rem 1rem 0rem;
+  font-weight: 400;
+}
+.frequent-container .Email-input{
+  margin-bottom: 7rem;
 }
