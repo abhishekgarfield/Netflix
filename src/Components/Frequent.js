@@ -1,8 +1,5 @@
-import { useState } from "react";
 import Pair from "./pair";
-
-const Frequent = () => {
-  const data = [
+const data = [
     {
       q: "What is Netflix?",
       a: "Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!",
@@ -28,6 +25,8 @@ const Frequent = () => {
       a: "The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.",
     },
   ];
+const Frequent = () => {
+ 
   return (
     <div className="frequent-container">
       <h1>Frequently Asked Questions</h1>

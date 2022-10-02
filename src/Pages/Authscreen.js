@@ -50,7 +50,7 @@ const AuthScreen = () => {
         </div>
         <div className="second-img">
           <div className="image-container">
-            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" />
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"  alt="tv" />
             <div className="video-container">
               <video autoPlay loop muted playsinline>
                 <source
@@ -66,14 +66,14 @@ const AuthScreen = () => {
       <div className="Third-container">
         <div className="second-img">
           <div className="image-container">
-            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" />
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="book" />
             <div className="image-container1">
-             <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"/>
+             <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="gif"/>
              <div className="styles">
               <h3>Starnger things</h3>
               <p>Downloading...</p>
              </div>
-             <img  id="gif" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif"/>
+             <img  id="gif" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif" alt="donload"/>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ const AuthScreen = () => {
         </div>
         <div className="second-img">
           <div className="image-container">
-            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png" />
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png"  alt="tv"/>
             <div className="video-container">
               <video autoPlay loop muted playsinline>
                 <source
@@ -110,7 +110,7 @@ const AuthScreen = () => {
       <div className="fifth-container">
         <div className="second-img">
           <div className="image-container">
-            <img src="https://occ.a.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABYjXrxZKtrzxQRVQNn2aIByoomnlbXmJ-uBy7du8a5Si3xqIsgerTlwJZG1vMpqer2kvcILy0UJQnjfRUQ5cEr7gQlYqXfxUg7bz.png?r=420" />
+            <img src="https://occ.a.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABYjXrxZKtrzxQRVQNn2aIByoomnlbXmJ-uBy7du8a5Si3xqIsgerTlwJZG1vMpqer2kvcILy0UJQnjfRUQ5cEr7gQlYqXfxUg7bz.png?r=420" alt="tv" />
             
           </div>
         </div>
