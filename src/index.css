@@ -7,3 +7,131 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.First-Container {
+  background-color: black;
+  display: flex;
+  background:linear-gradient(rgba(0, 0, 0, 0.861),rgba(0, 0, 0, 0.348) ,rgb(0, 0, 0)), url("https://assets.nflxext.com/ffe/siteui/vlv3/b321426e-35ae-4661-b899-d63bca17648a/c6e22290-98e5-4eee-b72d-47156e4893fc/IN-en-20220926-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+  flex-direction: column;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  height: 80vh;
+  justify-content: center;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 50px 0px 50px;
+  align-items: center;
+}
+
+.header-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header select {
+  padding: 7px 15px 7px 15px;
+  margin-right: 30px;
+  border: 1px solid white;
+  font-size: 15px;
+  font-weight: 500;
+  background-color:rgba(0, 0, 0, 0.608);
+  border-radius: 3px;
+  color: white;
+}
+
+.Header input {
+  padding: 7px 15px 7px 15px;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color:rgba(229,9,20,255);
+  border-radius: 3px;
+  border: 0px;
+  color: white;
+}
+
+.Header-image {
+  width: 10%;
+  display: flex;
+}
+
+.Header-image img {
+  display: flex;
+  width: 100%;
+}
+
+.Search-container {
+  color: white;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.Email-input {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+ width: 50%;
+  align-items: center;
+}
+
+.Search-container h1{
+  font-size:50px;
+  width: 45%;
+  padding: 0% 20% 0% 20%;
+  text-align: center;
+  margin: 0rem 0rem 1rem 0rem;
+}
+.Search-container h2{
+  font-size:30px;
+  width: 45%;
+  text-align: center;
+  font-weight: 400;
+  margin: 0rem 0rem 1rem 0rem;
+}
+.Search-container h3{
+  font-size:20px;
+  width: 55%;
+  text-align: center;
+  font-weight: 400;
+  margin: 0.5rem 0rem 0.9rem 0rem;
+}
+.Search-container input[type=text]{
+  padding: 15px;
+  flex-grow: 1;
+  font-size: 20px;
+  position: relative;
+}
+.Search-container input[type=button]{
+  padding: 15px;
+  background-color:rgba(229,9,20,255); ;
+  color: white;
+  border: none;
+  font-size: 22px;
+  margin-left: 1px;
+  position: relative;
+}
+.Search-container .label{
+  position: absolute;
+  font-size: 20px;
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.607);
+  transition: 0.3s all;
+}
+.Email-input:hover .label
+{
+  top:2px;
+  font-size: 12px;
+}
+.label:hover{
+  top:2px;
+  font-size: 12px;
+}
