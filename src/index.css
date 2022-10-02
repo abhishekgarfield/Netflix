@@ -553,63 +553,96 @@ li {
     margin: 0 0 1rem;
     text-align: center;
     width: 60%;
-    padding:0% 10%;
+    padding: 0% 10%;
     font-size: 40px;
   }
+
   .Header-image {
     display: flex;
     width: 20%;
-}
-.Header{
-  padding: 20px;
-}
-.fifth-container , .Second-container , .Third-container ,.fourth-container, .footer ,.frequent-container{
-  padding: 0% 2%;
-  width: 96%;
-}
+  }
+
+  .Header {
+    padding: 20px;
+  }
+
+  .fifth-container,
+  .Second-container,
+  .Third-container,
+  .fourth-container,
+  .footer,
+  .frequent-container {
+    padding: 0% 2%;
+    width: 96%;
+  }
 
 }
 
-@media screen and (max-width:830px)
-{
-  .fifth-container , .Second-container , .Third-container ,.fourth-container,.fifth-container, .footer ,.frequent-container{
+@media screen and (max-width:830px) {
+
+  .fifth-container,
+  .Second-container,
+  .Third-container,
+  .fourth-container,
+  .fifth-container,
+  .footer,
+  .frequent-container {
     flex-direction: column;
     height: auto;
   }
-  .Second-container .second-info h2,.Third-container .second-info h2,.fourth-container .second-info h2, .footer .second-info h2 ,.frequent-container .second-info h2 ,.fifth-container .second-info h2{
-   width: 80%;
-   font-size: 20px;
-   text-align: center;
-   margin: 10px auto 10px auto;
+
+  .Second-container .second-info h2,
+  .Third-container .second-info h2,
+  .fourth-container .second-info h2,
+  .footer .second-info h2,
+  .frequent-container .second-info h2,
+  .fifth-container .second-info h2 {
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px auto 10px auto;
   }
-  .Second-container .second-info h1 , .Second-container .second-info h1 , .Third-container  .second-info h1,.fourth-container .second-info h1, .footer .second-info h1 ,.frequent-container  h1 ,.fifth-container .second-info h1{
+
+  .Second-container .second-info h1,
+  .Second-container .second-info h1,
+  .Third-container .second-info h1,
+  .fourth-container .second-info h1,
+  .footer .second-info h1,
+  .frequent-container h1,
+  .fifth-container .second-info h1 {
     width: 80%;
     margin: auto;
     font-size: 30px;
     text-align: center;
     margin: 10px auto 10px auto;
-   }
-   .Search-container h1 {
+  }
+
+  .Search-container h1 {
     margin: 0 0 1rem;
     text-align: center;
     width: 80%;
-    padding:0% 10%;
+    padding: 0% 10%;
     font-size: 40px;
   }
-  .Search-container h2{
+
+  .Search-container h2 {
     width: 80%;
   }
-  .Search-container h3{
+
+  .Search-container h3 {
     width: 80%;
   }
-  .Email-input{
+
+  .Email-input {
     width: auto;
   }
-  .frequent-container h1{
+
+  .frequent-container h1 {
     width: 90%;
 
   }
+
   .pair-cont {
-width: 90%;
-}
+    width: 90%;
+  }
 }
