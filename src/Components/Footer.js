@@ -28,11 +28,10 @@ const Footer = () => {
         </ul>
       </div>
       <select placeholder="select">
-              <option>English</option>
-              <option>Hindi</option>
-              <option>Hindi</option>
-            </select>
-            <p>Netflix India</p>
+        <option>English</option>
+        <option>Hindi</option>
+      </select>
+      <p>Netflix India</p>
     </div>
   );
 };

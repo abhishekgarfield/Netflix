@@ -1,5 +1,5 @@
-import Frequent from "../Components/Frequent.js"
-import Footer from "../Components/Footer.js"
+import Frequent from "../Components/Frequent.js";
+import Footer from "../Components/Footer.js";
 const AuthScreen = () => {
   return (
     <div className="Auth-container">
@@ -11,7 +11,6 @@ const AuthScreen = () => {
           <div className="header-options">
             <select placeholder="select">
               <option>English</option>
-              <option>Hindi</option>
               <option>Hindi</option>
             </select>
             <input type="button" value="Sign in" />
@@ -39,7 +38,7 @@ const AuthScreen = () => {
           </div>
         </div>
       </div>
-      <hr/>
+      <hr />
       <div className="Second-container">
         <div className="second-info">
           <h1>Enjoy on your TV.</h1>
@@ -50,7 +49,10 @@ const AuthScreen = () => {
         </div>
         <div className="second-img">
           <div className="image-container">
-            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"  alt="tv" />
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+              alt="tv"
+            />
             <div className="video-container">
               <video autoPlay loop muted playsinline>
                 <source
@@ -62,18 +64,28 @@ const AuthScreen = () => {
           </div>
         </div>
       </div>
-      <hr/>
+      <hr />
       <div className="Third-container">
         <div className="second-img">
           <div className="image-container">
-            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="book" />
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+              alt="book"
+            />
             <div className="image-container1">
-             <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="gif"/>
-             <div className="styles">
-              <h3>Starnger things</h3>
-              <p>Downloading...</p>
-             </div>
-             <img  id="gif" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif" alt="donload"/>
+              <img
+                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"
+                alt="gif"
+              />
+              <div className="styles">
+                <h3>Starnger things</h3>
+                <p>Downloading...</p>
+              </div>
+              <img
+                id="gif"
+                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif"
+                alt="donload"
+              />
             </div>
           </div>
         </div>
@@ -84,17 +96,21 @@ const AuthScreen = () => {
           </h2>
         </div>
       </div>
-      <hr/>
+      <hr />
       <div className="fourth-container">
         <div className="second-info">
           <h1>Watch everywhere.</h1>
           <h2>
-          Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.
+            Stream unlimited movies and TV shows on your phone, tablet, laptop,
+            and TV.
           </h2>
         </div>
         <div className="second-img">
           <div className="image-container">
-            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png"  alt="tv"/>
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png"
+              alt="tv"
+            />
             <div className="video-container">
               <video autoPlay loop muted playsinline>
                 <source
@@ -106,12 +122,14 @@ const AuthScreen = () => {
           </div>
         </div>
       </div>
-      <hr/>
+      <hr />
       <div className="fifth-container">
         <div className="second-img">
           <div className="image-container">
-            <img src="https://occ.a.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABYjXrxZKtrzxQRVQNn2aIByoomnlbXmJ-uBy7du8a5Si3xqIsgerTlwJZG1vMpqer2kvcILy0UJQnjfRUQ5cEr7gQlYqXfxUg7bz.png?r=420" alt="tv" />
-            
+            <img
+              src="https://occ.a.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABYjXrxZKtrzxQRVQNn2aIByoomnlbXmJ-uBy7du8a5Si3xqIsgerTlwJZG1vMpqer2kvcILy0UJQnjfRUQ5cEr7gQlYqXfxUg7bz.png?r=420"
+              alt="tv"
+            />
           </div>
         </div>
         <div className="second-info">
@@ -121,11 +139,10 @@ const AuthScreen = () => {
           </h2>
         </div>
       </div>
-      <hr/>
-      <Frequent/>
-      <hr/>
-      <Footer/>
-      
+      <hr />
+      <Frequent />
+      <hr />
+      <Footer />
     </div>
   );
 };
