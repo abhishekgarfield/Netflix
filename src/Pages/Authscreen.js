@@ -1,4 +1,5 @@
 import Frequent from "../Components/Frequent.js"
+import Footer from "../Components/Footer.js"
 const AuthScreen = () => {
   return (
     <div className="Auth-container">
@@ -38,6 +39,7 @@ const AuthScreen = () => {
           </div>
         </div>
       </div>
+      <hr/>
       <div className="Second-container">
         <div className="second-info">
           <h1>Enjoy on your TV.</h1>
@@ -60,6 +62,7 @@ const AuthScreen = () => {
           </div>
         </div>
       </div>
+      <hr/>
       <div className="Third-container">
         <div className="second-img">
           <div className="image-container">
@@ -81,6 +84,7 @@ const AuthScreen = () => {
           </h2>
         </div>
       </div>
+      <hr/>
       <div className="fourth-container">
         <div className="second-info">
           <h1>Watch everywhere.</h1>
@@ -102,6 +106,7 @@ const AuthScreen = () => {
           </div>
         </div>
       </div>
+      <hr/>
       <div className="fifth-container">
         <div className="second-img">
           <div className="image-container">
@@ -116,7 +121,10 @@ const AuthScreen = () => {
           </h2>
         </div>
       </div>
+      <hr/>
       <Frequent/>
+      <hr/>
+      <Footer/>
       
     </div>
   );
