@@ -37,6 +37,28 @@ const AuthScreen = () => {
           </div>
         </div>
       </div>
+      <div className="Second-container">
+        <div className="second-info">
+          <h1>Enjoy on your TV.</h1>
+          <h2>
+            Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+            players and more.
+          </h2>
+        </div>
+        <div className="second-img">
+          <div className="image-container">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" />
+            <div className="video-container">
+              <video autoPlay loop muted playsinline>
+                <source
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
