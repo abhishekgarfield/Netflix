@@ -1,6 +1,6 @@
 # Netflix
 
-## Technologies used : Reactjs , js , html , css
+## Technologies used : Reactjs , js , html , css , phonE UI
 
 1) Authscreen
 2) Authmodel
@@ -30,3 +30,11 @@ iii) Frequntly asked questions
 iv) Footer
 
 <img width="1428" alt="Screenshot 2022-10-02 at 4 48 49 PM" src="https://user-images.githubusercontent.com/49722470/193451444-0d84fde3-52aa-45c2-97e7-3f948f70d800.png">
+
+v) Mobile devices
+
+<img width="499" alt="Screenshot 2022-10-02 at 5 36 16 PM" src="https://user-images.githubusercontent.com/49722470/193453125-1a0c8e59-d8f6-4796-863e-d5a1f7916256.png">
+
+<img width="499" alt="Screenshot 2022-10-02 at 5 36 23 PM" src="https://user-images.githubusercontent.com/49722470/193453129-ce13e10d-0f20-432e-9e62-58e37af044d1.png">
+
+
