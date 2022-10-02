@@ -340,3 +340,40 @@ padding-left: 2rem;
   width: 100%;
   z-index: 4;
 }
+
+/* ------------------ 5th container -------------- */
+
+.fifth-container{
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  height: 70vh;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.fifth-container .second-info h1 {
+  font-size: 50px;
+  text-align: left;
+  margin: 0rem 0rem 1rem 0rem;
+  padding-left: 2rem;
+}
+.fifth-container .second-info{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.fifth-container .second-info h2 {
+  font-size: 25px;
+  text-align: left;
+  margin: 0rem;
+padding-left: 2rem;
+  font-weight: 500;
+}
+
+.fifth-container .image-container {
+  position: relative;
+  height: 90%;
+  width: 73%;
+  z-index: 10;
+  padding-left: 10rem;
+}

@@ -101,6 +101,20 @@ const AuthScreen = () => {
           </div>
         </div>
       </div>
+      <div className="fifth-container">
+        <div className="second-img">
+          <div className="image-container">
+            <img src="https://occ.a.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABYjXrxZKtrzxQRVQNn2aIByoomnlbXmJ-uBy7du8a5Si3xqIsgerTlwJZG1vMpqer2kvcILy0UJQnjfRUQ5cEr7gQlYqXfxUg7bz.png?r=420" />
+            
+          </div>
+        </div>
+        <div className="second-info">
+          <h1>Download your shows to watch offline.</h1>
+          <h2>
+            Save your favourites easily and always have something to watch.
+          </h2>
+        </div>
+      </div>
       
     </div>
   );
