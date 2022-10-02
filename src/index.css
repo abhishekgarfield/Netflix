@@ -377,3 +377,37 @@ padding-left: 2rem;
   z-index: 10;
   padding-left: 10rem;
 }
+
+/* Frequent */
+
+.frequent-container{
+
+background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.pair-cont{
+  display: flex;
+  width: 60%;
+  margin: 0.5rem 0rem 0.5rem 0rem ;
+  flex-direction: column;
+  position: relative;
+}
+.question{
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgba(211, 211, 211, 0.274);
+}
+.answer
+{
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.fa.fa-remove{
+  
+}

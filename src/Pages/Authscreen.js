@@ -1,3 +1,4 @@
+import Frequent from "../Components/Frequent.js"
 const AuthScreen = () => {
   return (
     <div className="Auth-container">
@@ -115,6 +116,7 @@ const AuthScreen = () => {
           </h2>
         </div>
       </div>
+      <Frequent/>
       
     </div>
   );
