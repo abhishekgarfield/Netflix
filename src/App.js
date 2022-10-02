@@ -3,7 +3,7 @@ import AuthScreen from "./Pages/Authscreen";
 import HomeScreen from "./Pages/HomeScreen";
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="" element={<AuthScreen />} />
         <Route path="/netflix" element={<HomeScreen />} />
