@@ -30,7 +30,7 @@ const Frequent = () => {
     <div className="frequent-container">
       <h1>Frequently Asked Questions</h1>
       {data.map((data, index) => {
-        return <Pair data={data} />;
+        return <Pair data={data} key={index} />;
       })}
       <h3>
         Ready to watch? Enter your email to create or restart your membership.
