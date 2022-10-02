@@ -297,4 +297,46 @@ padding-left: 2rem;
     flex: 0 0 50%;
   }
 
-  
+  /* ------------------ 4th container -------------- */
+
+.fourth-container{
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  height: 70vh;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.second-img {
+  flex: 0 0 50%;
+}
+
+.fourth-container .image-container {
+  position: relative;
+  height: 100%;
+  width: 80%;
+  z-index: 10;
+}
+
+.fourth-container .second-img img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.fourth-container  .video-container {
+  position: absolute;
+  top: 0;
+  transform: translate(29%, 3%);
+    height: 65%;
+    width: 63%;
+  z-index: 1;
+}
+
+.fourth-container  video {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+}

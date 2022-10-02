@@ -59,6 +59,49 @@ const AuthScreen = () => {
           </div>
         </div>
       </div>
+      <div className="Third-container">
+        <div className="second-img">
+          <div className="image-container">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" />
+            <div className="image-container1">
+             <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"/>
+             <div className="styles">
+              <h3>Starnger things</h3>
+              <p>Downloading...</p>
+             </div>
+             <img  id="gif" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif"/>
+            </div>
+          </div>
+        </div>
+        <div className="second-info">
+          <h1>Download your shows to watch offline.</h1>
+          <h2>
+            Save your favourites easily and always have something to watch.
+          </h2>
+        </div>
+      </div>
+      <div className="fourth-container">
+        <div className="second-info">
+          <h1>Watch everywhere.</h1>
+          <h2>
+          Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.
+          </h2>
+        </div>
+        <div className="second-img">
+          <div className="image-container">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png" />
+            <div className="video-container">
+              <video autoPlay loop muted playsinline>
+                <source
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   );
 };
