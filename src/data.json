@@ -1,0 +1,12 @@
+{
+  "show_type": [
+    {
+      "id": 0,
+      "Type": "Movies"
+    },
+    {
+      "id": 1,
+      "Type": "Tv series"
+    }
+  ]
+}

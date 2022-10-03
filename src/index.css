@@ -646,3 +646,48 @@ li {
     width: 90%;
   }
 }
+
+/* ------- Navbar -----*/
+.navbar-container {
+  display: flex;
+  background-color: black;
+  flex-direction: column;
+  padding: 20px 20px 20px 20px;
+  background-color: black;
+}
+
+
+.cont2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-div{
+  padding: 3px;
+  font-size: 15px;
+  font-weight: 500;
+  justify-content: center;
+  margin: 0rem 0.5rem 0rem 0.5rem ;
+}
+.nav-left img{
+  width: 110px;
+  display: block;
+}
+
+/*----------Generes ------------------*/
+
+.GenreContainer{
+  display: flex;
+  background-color: aqua;
+  height: 30rem;
+}
