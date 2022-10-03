@@ -1,5 +1,6 @@
 const Navbar = () => {
   return (
+    <div className="protection"> 
     <div className="navbar-container">
       <div className="cont2">
         <div className="nav-left">
@@ -15,6 +16,7 @@ const Navbar = () => {
           <div className="nav-div">sIGNOUT</div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
