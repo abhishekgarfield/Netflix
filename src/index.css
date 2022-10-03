@@ -689,5 +689,14 @@ li {
 .GenreContainer{
   display: flex;
   background-color: aqua;
+  flex-direction: column;
   height: 30rem;
+}
+.Generrow{
+  display: flex;
+  flex-direction: column;
+}
+.Movie-row{
+  display: flex;
+  flex-direction: row;
 }

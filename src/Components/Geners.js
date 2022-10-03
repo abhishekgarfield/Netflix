@@ -1,12 +1,17 @@
+import MovieCard from "./Moviecard";
+
 const Geners = () => {
   const data = ["Action", "comedy"];
   return (
     <div className="GenreContainer">
-      <div className="Gener-header">
-        {data?.map((data) => {
-          return <div>{data}</div>;
-        })}
-      </div>
+      {data?.map((data) => {
+        return (
+          <div className="Generrow">
+            <div>{data}</div>;
+            <MovieCard/>
+          </div>
+        );
+      })}
     </div>
   );
 };
