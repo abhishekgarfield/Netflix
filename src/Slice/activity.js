@@ -9,7 +9,7 @@ export  const Activityslice=createSlice({
     initialState,
     reducers:{
         setIsloading:(state,action)=>
-        { console.log(action.payload)
+        { console.log("in reducer")
             state.isLoading=action.payload;
         }
     }

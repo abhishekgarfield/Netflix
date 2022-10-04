@@ -1,9 +1,17 @@
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsloading } from "../Slice/activity";
 import MovieCard from "./Moviecard";
 
 const Geners = () => {
   const [data, setData] = useState(null);
+  const disptach = useDispatch();
+  const isloading = useSelector((state) => {
+    return state.activity.isLoading;
+  });
+  console.log(isloading);
   const getGeneres = () => {
+    disptach(setIsloading(true));
     const url = "http://localhost:8000/getgeneres";
     fetch(url, { method: "Get" })
       .then((res) => {
@@ -12,6 +20,7 @@ const Geners = () => {
       .then((data) => {
         console.log(data[0].types);
         setData(data);
+        disptach(setIsloading(false));
       });
   };
   useEffect(() => {
@@ -39,7 +48,8 @@ const Geners = () => {
         </div>
       </div>
       <div className="GenreContainer">
-        {data &&
+        {!isloading &&
+          data &&
           data[0].types?.map((data) => {
             return (
               <div className="Generrow">
@@ -48,6 +58,11 @@ const Geners = () => {
               </div>
             );
           })}
+        {isloading && (
+          <div className="loader-container">
+            <div className="loader"></div>
+          </div>
+        )}
       </div>
     </div>
   );

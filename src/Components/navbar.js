@@ -1,7 +1,6 @@
 const Navbar = () => {
   window.addEventListener("scroll", () => {
     if (document.documentElement.scrollTop > 10) {
-      console.log(document.documentElement.scrollTop);
       document.querySelector(
         ".navbar-container"
       ).style.backgroundColor = `rgba(20,20,20,${

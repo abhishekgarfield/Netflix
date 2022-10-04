@@ -1007,3 +1007,31 @@ flex-wrap: wrap;
   background-repeat: no-repeat;
   background-size: 100vw 80vh !important;
  }
+
+.loader-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+ .loader{
+  border: 10px solid rgba(229, 9, 20, 0.25)  ;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin-top: 3rem;
+  z-index: 29;
+ animation:loadt 1s linear infinite;
+  border-top: 10px solid rgba(229,9,20,255)
+  ;
+ }
+ @keyframes loadt{
+  0%{transform: rotate(0deg);};
+  25%{transform: rotate(90deg);}
+  50%{transform: rotate(270deg);}
+  100%{transform: rotate(360deg);}
+ }
+
+
+
+
+ 
