@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  window.addEventListener("scroll", () => {
+  useEffect(()=>{
+  document.addEventListener("scroll", () => {
     if (document.documentElement.scrollTop > 10) {
       document.querySelector(
         ".navbar-container"
@@ -14,6 +16,7 @@ const Navbar = () => {
         "linear-gradient(rgba(0, 0, 0, 0.865),rgba(0, 0, 0, 0))";
     }
   });
+},[]);
   return (
     <div className="protection">
       <div className="navbar-container">

@@ -18,7 +18,6 @@ const Geners = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data[0].types);
         setData(data);
         disptach(setIsloading(false));
       });
@@ -50,9 +49,9 @@ const Geners = () => {
       <div className="GenreContainer">
         {!isloading &&
           data &&
-          data[0].types?.map((data) => {
+          data[0].types?.map((data,index) => {
             return (
-              <div className="Generrow">
+              <div className="Generrow" key={index}>
                 <div className="genereheader"> {data.type}</div>
                 <MovieCard gener_id={data.id} />
               </div>

@@ -30,7 +30,7 @@ const MovieCard = ({ show_id, gener_id }) => {
             <img src={data.img_url} />
             <div className="card-info-cont">
               <div className="col1">
-                <div classname="right">
+                <div className="right">
                   <i className="fa fa-play"></i>
                   <i className="fa fa-plus"></i>
                   <i className="fa fa-thumbs-up"></i>
@@ -45,8 +45,8 @@ const MovieCard = ({ show_id, gener_id }) => {
               </div>
               <div className="col3">
                 <ul>
-                  {data.generes.map((data) => {
-                    return <li>{data}</li>;
+                  {data.generes.map((data,index) => {
+                    return <li key={index}>{data}</li>;
                   })}
                 </ul>
               </div>

@@ -69,11 +69,11 @@ const Browsescreen = () => {
           <div className="browse-movie-container">
             {data?.map((data, index) => {
               return (
-                <div className="card-cont">
+                <div className="card-cont" key={index}>
                   <img src={data.img_url} />
                   <div className="card-info-cont">
                     <div className="col1">
-                      <div classname="right">
+                      <div className="right">
                         <i className="fa fa-play"></i>
                         <i className="fa fa-plus"></i>
                         <i className="fa fa-thumbs-up"></i>
@@ -88,8 +88,8 @@ const Browsescreen = () => {
                     </div>
                     <div className="col3">
                       <ul>
-                        {data.generes.map((data) => {
-                          return <li>{data}</li>;
+                        {data.generes.map((data,index) => {
+                          return <li key={index}>{data}</li>;
                         })}
                       </ul>
                     </div>
