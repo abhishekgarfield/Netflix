@@ -20,7 +20,6 @@ const Browsescreen = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setData(data);
         disptach(setIsloading(false));
       });
@@ -88,7 +87,7 @@ const Browsescreen = () => {
                     </div>
                     <div className="col3">
                       <ul>
-                        {data.generes.map((data,index) => {
+                        {data.generes.map((data, index) => {
                           return <li key={index}>{data}</li>;
                         })}
                       </ul>

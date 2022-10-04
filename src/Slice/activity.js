@@ -9,7 +9,6 @@ export const Activityslice = createSlice({
   initialState,
   reducers: {
     setIsloading: (state, action) => {
-      console.log("in reducer");
       state.isLoading = action.payload;
     },
   },

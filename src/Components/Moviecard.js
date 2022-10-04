@@ -14,7 +14,6 @@ const MovieCard = ({ show_id, gener_id }) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setData(data);
       });
   };
@@ -45,7 +44,7 @@ const MovieCard = ({ show_id, gener_id }) => {
               </div>
               <div className="col3">
                 <ul>
-                  {data.generes.map((data,index) => {
+                  {data.generes.map((data, index) => {
                     return <li key={index}>{data}</li>;
                   })}
                 </ul>

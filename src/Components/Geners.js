@@ -9,7 +9,6 @@ const Geners = () => {
   const isloading = useSelector((state) => {
     return state.activity.isLoading;
   });
-  console.log(isloading);
   const getGeneres = () => {
     disptach(setIsloading(true));
     const url = "http://localhost:8000/getgeneres";
@@ -49,7 +48,7 @@ const Geners = () => {
       <div className="GenreContainer">
         {!isloading &&
           data &&
-          data[0].types?.map((data,index) => {
+          data[0].types?.map((data, index) => {
             return (
               <div className="Generrow" key={index}>
                 <div className="genereheader"> {data.type}</div>

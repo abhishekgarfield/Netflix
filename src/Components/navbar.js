@@ -3,20 +3,20 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  useEffect(()=>{
-  document.addEventListener("scroll", () => {
-    if (document.documentElement.scrollTop > 10) {
-      document.querySelector(
-        ".navbar-container"
-      ).style.backgroundColor = `rgba(20,20,20,${
-        0.01 * document.documentElement.scrollTop
-      })`;
-    } else {
-      document.querySelector(".navbar-container").style.background =
-        "linear-gradient(rgba(0, 0, 0, 0.865),rgba(0, 0, 0, 0))";
-    }
-  });
-},[]);
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      if (document.documentElement.scrollTop > 10) {
+        document.querySelector(
+          ".navbar-container"
+        ).style.backgroundColor = `rgba(20,20,20,${
+          0.01 * document.documentElement.scrollTop
+        })`;
+      } else {
+        document.querySelector(".navbar-container").style.background =
+          "linear-gradient(rgba(0, 0, 0, 0.865),rgba(0, 0, 0, 0))";
+      }
+    });
+  }, []);
   return (
     <div className="protection">
       <div className="navbar-container">
@@ -57,7 +57,7 @@ const Navbar = () => {
             <div className="nav-div">
               <i className="fa fa-search"></i>
             </div>
-            <div className="nav-div">sIGNOUT</div>
+            <div className="nav-div">Signout</div>
           </div>
         </div>
       </div>
