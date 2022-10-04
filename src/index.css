@@ -701,7 +701,8 @@ li {
   margin: 0rem 0.5rem 0rem 0.5rem;
   transition: 0.3s all;
 }
-.nav-div:hover{
+
+.nav-div:hover {
   color: rgba(255, 255, 255, 0.505);
   cursor: pointer;
 }
@@ -1083,9 +1084,11 @@ li {
   animation: loadt 1s linear infinite;
   border-top: 10px solid rgba(229, 9, 20, 255)
 }
-.Browsescreencontainer .footer{
+
+.Browsescreencontainer .footer {
   background-color: rgb(20, 20, 20);
 }
+
 .card-cont:nth-child(6n) {
   transform-origin: 0%;
 }

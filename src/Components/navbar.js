@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   window.addEventListener("scroll", () => {
     if (document.documentElement.scrollTop > 10) {
       document.querySelector(
@@ -15,32 +15,49 @@ const Navbar = () => {
     }
   });
   return (
-    <div className="protection"> 
-    <div className="navbar-container">
-      <div className="cont2">
-        <div className="nav-left">
-          <img src="https://i.imgur.com/J2pPJxt.png" />
+    <div className="protection">
+      <div className="navbar-container">
+        <div className="cont2">
+          <div className="nav-left">
+            <img src="https://i.imgur.com/J2pPJxt.png" />
 
-          <div className="nav-div" onClick={()=>{
-            navigate("/netflix")
-            window.location.reload();
-          }}>Home</div>
-          <div className="nav-div" onClick={()=>{
-            navigate("/netflix/browse/100")
-            window.location.reload();
-          }}>Movies</div>
-          <div className="nav-div" onClick={()=>{
-            navigate("/netflix/browse/101")
-            window.location.reload();
-          }}>Tv shows</div>
-          <div className="nav-div">My list</div>
-        </div>
-        <div className="nav-right">
-          <div className="nav-div"><i className="fa fa-search"></i></div>
-          <div className="nav-div">sIGNOUT</div>
+            <div
+              className="nav-div"
+              onClick={() => {
+                navigate("/netflix");
+                window.location.reload();
+              }}
+            >
+              Home
+            </div>
+            <div
+              className="nav-div"
+              onClick={() => {
+                navigate("/netflix/browse/100");
+                window.location.reload();
+              }}
+            >
+              Movies
+            </div>
+            <div
+              className="nav-div"
+              onClick={() => {
+                navigate("/netflix/browse/101");
+                window.location.reload();
+              }}
+            >
+              Tv shows
+            </div>
+            <div className="nav-div">My list</div>
+          </div>
+          <div className="nav-right">
+            <div className="nav-div">
+              <i className="fa fa-search"></i>
+            </div>
+            <div className="nav-div">sIGNOUT</div>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

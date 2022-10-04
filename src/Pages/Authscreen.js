@@ -54,7 +54,7 @@ const AuthScreen = () => {
               alt="tv"
             />
             <div className="video-container">
-              <video autoPlay loop muted >
+              <video autoPlay loop muted>
                 <source
                   src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
                   type="video/mp4"
@@ -105,14 +105,14 @@ const AuthScreen = () => {
             and TV.
           </h2>
         </div>
-        <div className="second-img" >
+        <div className="second-img">
           <div className="image-container">
             <img
               src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png"
               alt="tv"
             />
             <div className="video-container">
-              <video autoPlay loop muted >
+              <video autoPlay loop muted>
                 <source
                   src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
                   type="video/mp4"
