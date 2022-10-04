@@ -17,120 +17,11 @@ app.get("/insert", async (req, res) => {
     const database = client.db("app-data");
     const movies = database.collection("Movies");
     const response = await movies.insertMany([
-        {
-            id:48,
-            show_id: 1,
-            gener_id:  5,
-            name: "Curse",
-            rating: "4.9",
-            img_url:
-              "https://occ-0-4344-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcL3wU3Ff8ZLDobTd5ZkeN6hzh-Dz6Op5hskok8CcXQfBRwi4tQlloaYM9ePUQWvH5-VlPD-cSkvVbrFzGwwe69gcUtIvB0Jz3dEN3n9I8fY07iP8ck7lnCc-7mmwji4V1Zi.jpg?r=f85",
-            about:
-              "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
-            maturityrating: "U/A13+",
-            duration: "2h 17m",
-            generes: ["Animation", "adventure"],
-            cast: "Garfield,ram charan",
-            "This movie is": "adrneline rush",
-            Director: "Garfield",
-            Writer: "Harsh",
-            inner_imgurl:
-              "https://occ-0-3213-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABfrcuTBuqtCsxY4DCvKZ4N9V_T-Bx252JG7UbpvzoH0U51mQU70831GaLtPi19IhL4x6NaAhSik6T3WHrFZpsMCvf0_4AsOg7-lR9JLTVyL0qBb-ks8db_KvW5eLEzePIqVuhkeij6GNlat0YbKgxdOOloN372Lsl2_b7mZxf-hbS4aMptOu.webp?r=d52",
-            wrapper_imgurl:
-              "https://occ-0-3213-2164.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABSO4ZyFwipXCoDeZLrxafzRXfpGNlomzFCjaYuFDm6Wl-0g4Zom9zrN1uyOS40wmIn4PlO8gGfxE7nPiu5w0g9HYhIi5SxQFlfeD.webp?r=b55",
-          },
+       
           {
-            id:49,
+            id:10,
             show_id: 1,
-            gener_id:  5,
-            name: "Money hiest",
-            rating: "4.9",
-            img_url:
-              "https://occ-0-4344-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWVH7VOsPUHNhhS2fpOR0Q9CT61JP4KK83LPof2Tkdq_NUBPDczqPDh75kws7IoqUzyWxuG9w7Mb-Z-HdqjkkHVvq7ncExexwnRP6R_GyxxXEPmH4lHn7U45_28a807lrR8-.jpg?r=a1a",
-            about:
-              "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
-            maturityrating: "U/A13+",
-            duration: "2h 17m",
-            generes: ["Animation", "adventure"],
-            cast: "Garfield,ram charan",
-            "This movie is": "adrneline rush",
-            Director: "Garfield",
-            Writer: "Harsh",
-            inner_imgurl:
-              "https://occ-0-4344-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABQwslcjXqMzUnrZkH24HLXBq0J_gOGR0hxStCT5Bj6F8G_Ya6s-LaFFyVaqPFhX8cSFXJZZ9QlpJVq0ri6geN8Pr9FSDT2z5UYXN1cUxYcjp73BMOENCeeNqauN9AVy_Ab7yZzsoRt0R6oNFVD0jCUfYflKnuzGLgAcinaRDP0nlunTSbp-k.webp?r=a1a",
-            wrapper_imgurl:
-              "https://occ-0-4344-2164.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABZRJUOijr5fgV2mO9k9GxiH1nWohiFJhkmordkUFEiNR7wFjrTuy0s8kL38fJNmsFquRDBH8E7W1g1yYP-OqGvy4FAGsHMvDUDp5.webp?r=b1f",
-          },
-          {
-            id:50,
-            show_id: 1,
-            gener_id:  5,
-            name: "The witcher",
-            rating: "4.9",
-            img_url:
-              "https://occ-0-4344-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRFIQrMmKLwJ0p9SsYWxR5jyp2rgPAEZBEfXzriXhzgkaqGKzBgc5XpftEebOLwak9MfH4ca8vyDtIYdmuEb6vwlHtThvaRShzK85kNWvG93x7Z7cJnnWWRplDeoXp-qQVkr.jpg?r=297",
-            about:
-              "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
-            maturityrating: "U/A13+",
-            duration: "2h 17m",
-            generes: ["Animation", "adventure"],
-            cast: "Garfield,ram charan",
-            "This movie is": "adrneline rush",
-            Director: "Garfield",
-            Writer: "Harsh",
-            inner_imgurl:
-              "https://occ-0-3213-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABfkDr8AX_779c2eY3IENktI1zMD3eG4flu8RycabMSY6dH2v_FFSzMcbng_mdEQQrd48L7QDvqBFDgtBWN9j6HW8tkkowmSeL93FKMRhKRy84kveWpM7DDnvlzYbU5gM6nkiepbQXxYJ8eRCc0miU4ew1DhVLwsWEqWoU1N1AZo_y_zVYPbg.webp?r=52a",
-            wrapper_imgurl:
-              "https://occ-0-3213-2164.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABatLV7Da_o0-i87r-Vc0leWUacFXCJDGF5vOaHCEReeryPlhApqooOLW2utazr05ReXtbWelEzcXeQZxrg-XTfKk2j_RKADeRKws.webp?r=14f",
-          },
-        {
-            id:51,
-            show_id: 1,
-            gener_id:  5,
-            name: "Guilty",
-            rating: "4.9",
-            img_url:
-              "https://occ-0-4344-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSQQIwS0hyTW96URPpcZfOukCskjwsDMp9jG_GZv7KBT0NNO1whLNKmxI-i5JiMoOeh8YPYJ1H53Laup1LnCQ_o8iC2LKCUKz4PlA6DR-ngJ2pV04XYcW8WboqNWiZ23192a.jpg?r=11d",
-            about:
-              "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
-            maturityrating: "U/A13+",
-            duration: "2h 17m",
-            generes: ["Animation", "adventure"],
-            cast: "Garfield,ram charan",
-            "This movie is": "adrneline rush",
-            Director: "Garfield",
-            Writer: "Harsh",
-            inner_imgurl:
-              "https://occ-0-3213-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABYOHiUC0XG7MLY8DBNmHTNSlTnbmJZU8Y9nV-hesjD98suRNe6l7ddl5fHLQ406pa8gtv3EFmGCrojrwUEfOCRVyvcyfvts1VIO0Kb0KJAfBGDW6bntoyb58D1KcjCBaFFrf0xfSZOFFu4Ro8XMACCuyL4PcLZ6WNM8NfUM7H6XnpLxxPXjX.webp?r=eda",
-            wrapper_imgurl:
-              "https://occ-0-3213-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdYKpe5Dvif2u4YFp2hWEbLoxoDBMHpV4ypwsMkM9cFNHVpvVzdEVdWbXujMArMHAYlmrggAAKMyt_vRFvHcRaTuICeMzQre936UTrUwdNlQd0Eu2arpidaMl-SpuQRebNo3NQ.jpg?r=11d",
-          },
-          {
-            id:52,
-            show_id: 1,
-            gener_id:  5,
-            name: "Dear zindgi",
-            rating: "4.9",
-            img_url:
-              "https://occ-0-4344-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbiOvWevQMh5Oe2ZUeqqCtLrXyMQ-iHE5SnKOwtHx1RNT6ONJSFqctOh2ShJEqlRU99mqmw5geKNiG_jVhkuCxRtsKAnA8ugGxM.webp?r=b77",
-            about:
-              "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
-            maturityrating: "U/A13+",
-            duration: "2h 17m",
-            generes: ["Animation", "adventure"],
-            cast: "Garfield,ram charan",
-            "This movie is": "adrneline rush",
-            Director: "Garfield",
-            Writer: "Harsh",
-            inner_imgurl:
-              "https://occ-0-3213-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABXnw77ioIgZHqbtCu2X9TUdySgPLrJ5RqhPYNtps69_3S8jjB7iGAbK99QiBP8uV4UoEFbm2Bmkr1VW-GHlsi7ioTjmE-R5FDnMn19G-qtU.webp?r=76b",
-            wrapper_imgurl:
-              "https://occ-0-3213-2164.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABQ03CqjbvjUQ5zB9LSQgnoFhwz1qEuVIzQxMYnEn8cJnHepQW7jdkDGpnetAbU3ncj6wNaGFnz_oTRFvYPL38lE7H1KgKHHGF6QB.webp?r=e24",
-          },
-          {
-            id:53,
-            show_id: 1,
-            gener_id:  5,
+            gener_id:  2,
             name: "Never have i ever",
             rating: "4.9",
             img_url:
@@ -139,7 +30,7 @@ app.get("/insert", async (req, res) => {
               "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
             maturityrating: "U/A13+",
             duration: "2h 17m",
-            generes: ["Animation", "adventure"],
+            generes: ["Adventure", "adventure"],
             cast: "Garfield,ram charan",
             "This movie is": "adrneline rush",
             Director: "Garfield",
@@ -150,9 +41,9 @@ app.get("/insert", async (req, res) => {
               "https://occ-0-4344-2164.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABd_L7KhKv-boEv-KvVaoFT3bcBwDpTm0FUNg1Gd3iMOj-2WQIqDsob8p5XUsIO0FsgpuoIXkkYFjPkC6eq9IDHRvlUFQD1IS_cqy.webp?r=ede",
           },
           {
-            id:54,
+            id:11,
             show_id: 1,
-            gener_id:  5,
+            gener_id:  2,
             name: "Mismatched",
             rating: "4.2",
             img_url:
@@ -161,7 +52,7 @@ app.get("/insert", async (req, res) => {
               "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
             maturityrating: "U/A13+",
             duration: "2h 17m",
-            generes: ["Animation", "adventure"],
+            generes: ["Adventure", "adventure"],
             cast: "Garfield,ram charan",
             "This movie is": "adrneline rush",
             Director: "Garfield",
@@ -172,9 +63,9 @@ app.get("/insert", async (req, res) => {
               "https://occ-0-4344-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeXD1suamjxGc5WEicymHkXElyvx7-RYv3w1U7jMIR4euD3eaurORn4t_veii_b4lKjhONbVFky-ThkkmCmALNIbhmvmt_bf7k7jDcZgAnqOf-6MbL3_IWW0rs8MvcevMSz7OA.jpg?r=e20",
           },
           {
-            id:55,
+            id:12,
             show_id: 1,
-            gener_id:  5,
+            gener_id:  2,
             name: "Sky is pink",
             rating: "4.9",
             img_url:
@@ -183,7 +74,7 @@ app.get("/insert", async (req, res) => {
               "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
             maturityrating: "U/A13+",
             duration: "2h 17m",
-            generes: ["Animation", "adventure"],
+            generes: ["Adventure", "adventure"],
             cast: "Garfield,ram charan",
             "This movie is": "adrneline rush",
             Director: "Garfield",
@@ -194,9 +85,9 @@ app.get("/insert", async (req, res) => {
               "https://occ-0-3213-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZN2oghM_5wRyHlZ83M8-et4FE7xwOcgwEDcwTWBSqRTPcYFPs7hraaBAGQnv30b16faekl4W5uFguhb9KulhVfianVxThT5SAwU.webp?r=55f",
           },
       {
-        id: 56,
+        id: 13,
         show_id: 1,
-        gener_id:  5,
+        gener_id:  2,
         name: "Dear zindgi",
         rating: "4.9",
         img_url:
@@ -205,7 +96,7 @@ app.get("/insert", async (req, res) => {
           "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
         maturityrating: "U/A13+",
         duration: "2h 17m",
-        generes: ["Animation", "adventure"],
+        generes: ["Adventure", "adventure"],
         cast: "Garfield,ram charan",
         "This movie is": "adrneline rush",
         Director: "Garfield",
@@ -216,9 +107,9 @@ app.get("/insert", async (req, res) => {
           "https://occ-0-3213-2164.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABQ03CqjbvjUQ5zB9LSQgnoFhwz1qEuVIzQxMYnEn8cJnHepQW7jdkDGpnetAbU3ncj6wNaGFnz_oTRFvYPL38lE7H1KgKHHGF6QB.webp?r=e24",
       },
       {
-        id: 57,
+        id: 64,
         show_id: 1,
-        gener_id:  5,
+        gener_id:  2,
         name: "Never have i ever",
         rating: "4.9",
         img_url:
@@ -227,7 +118,7 @@ app.get("/insert", async (req, res) => {
           "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
         maturityrating: "U/A13+",
         duration: "2h 17m",
-        generes: ["Animation", "adventure"],
+        generes: ["Adventure", "adventure"],
         cast: "Garfield,ram charan",
         "This movie is": "adrneline rush",
         Director: "Garfield",
@@ -238,9 +129,9 @@ app.get("/insert", async (req, res) => {
           "https://occ-0-4344-2164.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABd_L7KhKv-boEv-KvVaoFT3bcBwDpTm0FUNg1Gd3iMOj-2WQIqDsob8p5XUsIO0FsgpuoIXkkYFjPkC6eq9IDHRvlUFQD1IS_cqy.webp?r=ede",
       },
       {
-        id: 58,
+        id: 63,
         show_id: 1,
-        gener_id:  5,
+        gener_id:  2,
         name: "Mismatched",
         rating: "4.2",
         img_url:
@@ -249,7 +140,7 @@ app.get("/insert", async (req, res) => {
           "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
         maturityrating: "U/A13+",
         duration: "2h 17m",
-        generes: ["Animation", "adventure"],
+        generes: ["Adventure", "adventure"],
         cast: "Garfield,ram charan",
         "This movie is": "adrneline rush",
         Director: "Garfield",
@@ -260,9 +151,9 @@ app.get("/insert", async (req, res) => {
           "https://occ-0-4344-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeXD1suamjxGc5WEicymHkXElyvx7-RYv3w1U7jMIR4euD3eaurORn4t_veii_b4lKjhONbVFky-ThkkmCmALNIbhmvmt_bf7k7jDcZgAnqOf-6MbL3_IWW0rs8MvcevMSz7OA.jpg?r=e20",
       },
       {
-        id: 59,
+        id: 62,
         show_id: 1,
-        gener_id:  5,
+        gener_id:  2,
         name: "Sky is pink",
         rating: "4.9",
         img_url:
@@ -271,7 +162,7 @@ app.get("/insert", async (req, res) => {
           "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
         maturityrating: "U/A13+",
         duration: "2h 17m",
-        generes: ["Animation", "adventure"],
+        generes: ["Adventure", "adventure"],
         cast: "Garfield,ram charan",
         "This movie is": "adrneline rush",
         Director: "Garfield",
@@ -282,9 +173,9 @@ app.get("/insert", async (req, res) => {
           "https://occ-0-3213-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZN2oghM_5wRyHlZ83M8-et4FE7xwOcgwEDcwTWBSqRTPcYFPs7hraaBAGQnv30b16faekl4W5uFguhb9KulhVfianVxThT5SAwU.webp?r=55f",
       },
       {
-        id: 60,
+        id: 61,
         show_id: 1,
-        gener_id:  5,
+        gener_id:  2,
         name: "Jogi",
         rating: "4.2",
         img_url:
@@ -293,7 +184,7 @@ app.get("/insert", async (req, res) => {
           "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
         maturityrating: "U/A13+",
         duration: "2h 17m",
-        generes: ["Animation", "adventure"],
+        generes: ["Adventure", "adventure"],
         cast: "Garfield,ram charan",
         "This movie is": "adrneline rush",
         Director: "Garfield",
