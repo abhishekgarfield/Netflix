@@ -747,20 +747,25 @@ li {
 .left-arrow {
   content: "<";
   justify-content: center;
-  font-weight: 800;
+  font-weight: 400;
   font-size: 50px;
   position: absolute;
-  right: 0;
+  right: 0px;
   z-index: 15;
   text-align: center;
   display: flex;
-
-  position: absolute;
-  right: 0;
   flex-direction: column;
-  background-color: red;
+  background-color: transparent;
   height: 9rem;
-  border: 2px solid red;
+  width: 10rem;
+  transition: 0.2s all;
+  opacity: 0;
+  
+}
+
+.left-arrow:hover{
+  background-color: rgba(20, 20, 20, 0.552);
+  opacity: 1;
 }
 
 .Movie-row:nth-child(1) {
@@ -905,8 +910,6 @@ li {
   position: absolute;
   z-index: 1;
   top: 0px;
-  background: linear-gradient(black, white);
-  background-color: yellow;
   background: linear-gradient(180deg, hsla(0, 0%, 8%, 0) 0, hsla(0, 0%, 8%, .15) 15%, hsla(0, 0%, 8%, .35) 29%, hsla(0, 0%, 8%, .58) 44%, #141414), url("https://occ-0-3213-2164.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQ_rnBcfyQ4B_-wJIbxMoCRJtiI0vniCnSi5XvPtWX8oOKie9mOV1Aqu5CygubCqGWnD7KfTyPRPxcCNXul4bD19OpaWsCfQjD-9.webp?r=cb6")
 }
 
@@ -948,8 +951,59 @@ li {
 
 .fake-buttons div i {
   margin-right: 10px;
+  padding: 3px;
+}
+.fake-buttons div .fa.fa-exclamation{
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 1px 6px ;
 }
 
 .homepage-container .footer {
+  
   background-color: rgb(20, 20, 20);
 }
+
+/*--------- Browsescreen -------- */
+.Browsescreencontainer{
+  margin-top: 4rem;
+  margin-top: 70vh;
+  background-color: rgb(20, 20, 20);
+  
+}
+.browse-header{
+  display: flex;
+  font-size: 25px;
+  margin-left: 0.2rem;
+  position: relative;
+  z-index: 5;
+  font-weight: 500;
+  margin-left: 50px;
+}.browse-movie-container{
+display: flex;
+flex-wrap: wrap;
+ margin-left:45px;
+}
+ .browse-movie-container .card-cont
+ {
+  flex: 0 0 10%;
+ }
+ .browse-movie-container:nth-child(1) .card-cont img{
+  display: flex;
+  width:unset;
+  flex-grow: 1;
+ }
+ .Browsescreencontainer .wrapperimage {
+
+
+  display: flex;
+  flex-basis: 100%;
+  height: 80vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  background: linear-gradient(180deg, hsla(0, 0%, 8%, 0) 0, hsla(0, 0%, 8%, .15) 15%, hsla(0, 0%, 8%, .35) 29%, hsla(0, 0%, 8%, .58) 44%, #141414), url("https://occ-0-4344-2164.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABSl3gQTCvqTzELhebsVXxoihJEO1RkjjmgVIRGsJ09f1KnTQBm9nYoPLSGjB8XXctsTY1W8o5O7saUsHAjFBXjgVRmvkBPNfAwMI.webp?r=59a");
+  background-repeat: no-repeat;
+  background-size: 100vw 80vh !important;
+ }
