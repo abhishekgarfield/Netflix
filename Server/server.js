@@ -8,16 +8,16 @@ var MongoClient = require("mongodb").MongoClient;
 var uri = process.env.uri;
 const port = process.env.Port;
 
-app.get("/getgeneres", async(req, res)=>
-{console.log("geners")
+app.get("/getgeneres", async (req, res) => {
+  console.log("geners");
   const client = new MongoClient(uri);
   try {
     await client.connect();
     const database = client.db("app-data");
-    const collection =await database.collection("generes");
-    const generes=await collection.find().toArray();
-    console.log(generes)
-    res.send(generes)
+    const collection = await database.collection("generes");
+    const generes = await collection.find().toArray();
+    console.log(generes);
+    res.send(generes);
   } catch (err) {
     console.log(err);
   } finally {
@@ -25,18 +25,30 @@ app.get("/getgeneres", async(req, res)=>
   }
 });
 
-app.get("/getmovies", async(req, res)=>
-{console.log("getmovies")
-const {gener_id}=req.query;
-console.log(typeof(gener_id));
+app.get("/getmovies", async (req, res) => {
+  console.log("getmovies");
+  const { gener_id } = req.query;
+  console.log(typeof gener_id);
   const client = new MongoClient(uri);
   try {
     await client.connect();
     const database = client.db("app-data");
-    const collection =await database.collection("Movies");
-    const movies=await collection.find({"gener_id" : Number(gener_id)}).toArray();
-    console.log(movies)
-    res.send(movies)
+    const collection = await database.collection("Movies");
+    if (Number(gener_id == 100)) {
+      const movies = await collection.find({ show_id: 1 }).toArray();
+      console.log(movies);
+      return res.send(movies);
+    } else if (Number(gener_id == 100)) {
+      const movies = await collection.find({ show_id: 2 }).toArray();
+      console.log(movies);
+      return res.send(movies);
+    } else {
+      const movies = await collection
+        .find({ gener_id: Number(gener_id) })
+        .toArray();
+      console.log(movies);
+      return res.send(movies);
+    }
   } catch (err) {
     console.log(err);
   } finally {

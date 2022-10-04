@@ -59,7 +59,13 @@ const Browsescreen = () => {
             </div>
           </div>
           <Navbar />
-          <div className="browse-header">{data && data[0].generes[0]}</div>
+          <div className="browse-header">
+            {gener_id == 100 || gener_id == 101
+              ? gener_id == 100
+                ? "Movies"
+                : "Tv Shows"
+              : data && data[0].generes[0]}
+          </div>
           <div className="browse-movie-container">
             {data?.map((data, index) => {
               return (
@@ -99,7 +105,7 @@ const Browsescreen = () => {
           <div className="loader"></div>
         </div>
       )}
-      <Footer/>
+      <Footer />
     </div>
   );
 };

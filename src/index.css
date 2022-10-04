@@ -699,6 +699,11 @@ li {
   font-weight: 500;
   justify-content: center;
   margin: 0rem 0.5rem 0rem 0.5rem;
+  transition: 0.3s all;
+}
+.nav-div:hover{
+  color: rgba(255, 255, 255, 0.505);
+  cursor: pointer;
 }
 
 .nav-left img {
@@ -766,6 +771,7 @@ li {
 .left-arrow:hover {
   background-color: rgba(20, 20, 20, 0.552);
   opacity: 1;
+  cursor: pointer;
 }
 
 .Movie-row:nth-child(1) {
@@ -809,6 +815,7 @@ li {
 .card-cont:hover .card-info-cont {
   display: block;
   z-index: 11;
+  cursor: pointer;
   position: absolute;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -823,6 +830,7 @@ li {
   transform: scale(1.4);
   box-shadow: 0px 0px 10px 2px black;
   z-index: 11;
+  cursor: pointer;
 }
 
 .card-info-cont .col1 {
