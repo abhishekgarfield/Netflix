@@ -16,7 +16,7 @@ body {
 }
 
 .First-Container {
-  background-color: ;
+  background-color: black;
   display: flex;
   background: linear-gradient(rgba(0, 0, 0, 0.861), rgba(0, 0, 0, 0.348), rgb(0, 0, 0)), url("https://assets.nflxext.com/ffe/siteui/vlv3/b321426e-35ae-4661-b899-d63bca17648a/c6e22290-98e5-4eee-b72d-47156e4893fc/IN-en-20220926-popsignuptwoweeks-perspective_alpha_website_large.jpg");
   flex-direction: column;

@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { setIsloading } from "../Slice/activity";
 const MovieCard = ({ show_id, gener_id }) => {
+    const disptach=useDispatch();
   const navigation = useNavigate();
   const [data, setData] = useState(null);
   const getGeneres = () => {
@@ -28,7 +31,9 @@ const MovieCard = ({ show_id, gener_id }) => {
             <div className="card-info-cont">
               <div className="col1">
                 <div classname="right">
-                  <i className="fa fa-play"></i>
+                  <i className="fa fa-play" onClick={()=>{
+disptach(setIsloading(true));
+                  }}></i>
                   <i className="fa fa-plus"></i>
                   <i className="fa fa-thumbs-up"></i>
                 </div>
