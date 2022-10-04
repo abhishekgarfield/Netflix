@@ -9,17 +9,15 @@ const HomeScreen = () => {
       document.querySelector(
         ".navbar-container"
       ).style.backgroundColor = `rgba(20,20,20,${
-        0.004 * document.documentElement.scrollTop
+        0.01 * document.documentElement.scrollTop
       })`;
-    } 
-    else{
-      document.querySelector(
-        ".navbar-container"
-      ).style.background="linear-gradient(rgba(0, 0, 0, 0.865),rgba(0, 0, 0, 0))"
+    } else {
+      document.querySelector(".navbar-container").style.background =
+        "linear-gradient(rgba(0, 0, 0, 0.865),rgba(0, 0, 0, 0))";
     }
   });
   return (
-    <div className="homepage-container" >
+    <div className="homepage-container">
       <Navbar />
       <Geners />
       <Footer />
