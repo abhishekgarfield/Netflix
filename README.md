@@ -1,6 +1,6 @@
 # Netflix
 
-## Technologies used : Reactjs , js , html , css , phonE UI
+## Technologies used : Reactjs , js , html , css , phone UI ,Redux , Expressjs , Nodejs , Mongodb
 
 1) Authscreen
 2) Authmodel
