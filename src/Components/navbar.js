@@ -22,7 +22,11 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="cont2">
           <div className="nav-left">
-            <img src="https://i.imgur.com/J2pPJxt.png" />
+            <img src="https://i.imgur.com/J2pPJxt.png"  
+             onClick={() => {
+              navigate("/netflix");
+              window.location.reload();
+            }}/>
 
             <div
               className="nav-div"

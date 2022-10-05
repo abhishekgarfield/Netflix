@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useRoutes } from "react-router-dom";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/navbar";
 import { setIsloading } from "../Slice/activity";
 
 const Moviescreen = () => {
   const disptach = useDispatch();
-  const navigate = useNavigate();
+  const navigation = useNavigate();
   const isloading = useSelector((state) => {
     return state.activity.isLoading;
   });
   const { movie_id, gener_id } = useParams();
+  console.log(gener_id)
   const [data, setData] = useState(null);
   const [similar, setSimilar] = useState(null);
   const getMovie = () => {
@@ -39,10 +40,11 @@ const Moviescreen = () => {
   };
   useEffect(() => {
     getMovie();
-    getMovies
+    getMovies();
   }, []);
   return (
     <div className="Browsescreencontainer moviescreen">
+       
       {!isloading && (
         <>
           {" "}
@@ -76,7 +78,7 @@ const Moviescreen = () => {
             <div className="moviewscreen-left">
               <div>
                 <span>{Math.floor(Math.random() * 20) + 2000}</span>
-                <span  className="mat">{(data?.maturityrating).trim()}</span>
+                <span  className="mat">{data?.maturityrating}</span>
               </div>
               <div>#8 in Tv shows today</div>
               <div>{data?.about}</div>
@@ -87,10 +89,15 @@ const Moviescreen = () => {
               <div><span>This movie is:</span>{`Adrneline rush ,Gritty`}</div>
             </div>
           </div>
+          <p className="similar-header">More like this</p>
           <div className="browse-movie-container">
+            
             {similar?.map((data, index) => {
               return (
-                <div className="card-cont" key={index}>
+                <div className="card-cont" key={index} onClick={()=>{
+                    navigation(`/netflix/${data.id}/${data.gener_id}`)
+                    window.location.reload();
+                  }}>
                   <img src={data.img_url} />
                   <div className="card-info-cont">
                     <div className="col1">
@@ -118,17 +125,18 @@ const Moviescreen = () => {
                 </div>
               );
             })}
-            <div className="Info-card">
-                <p>{`About ${data.name}`}</p>
+            </div>
+           {data && <div className="Info-card">
+                <p>{`About ${data?.name}`}</p>
                 <div className="infocard-container">
                     <div><span>Creators:</span> Abhishek Garfield</div>
-                    <div><span>Cast:</span> Garfield , RiCHY , hARSH , jEAN , sHivani , Sudesh , Harsh mittal , Abhishek Sharma , Shubham , Rishu , Gaurav Mehat a, Harish , Ambika , Akash </div>
-                    <div><span>Generes:</span> {`${data.generes[0]},${data.generes[1]}`}</div>
+                    <div><span>Cast:</span> Garfield , Ricky , Harsh , Jean , Shivani , Sudesh , Harsh mittal , Abhishek Sharma , Shubham , Rishu , Gaurav Mehat a, Harish , Ambika , Akash </div>
+                    <div><span>Generes:</span> {`${data?.generes[0]},${data.generes[1]}`}</div>
                     <div><span>This show is:</span> Grity , Dark</div>
                     <div><span >Maturity rating: </span><span className="mat"> {`${data.maturityrating} `} </span> language , violence ,mature themes ,Content restricted to adults</div>
                 </div>
-            </div>
-          </div>
+            </div>}
+          
         </>
       )}
       {isloading && (

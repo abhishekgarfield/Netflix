@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { setIsloading } from "../Slice/activity";
 import MovieCard from "./Moviecard";
 
 const Geners = () => {
   const [data, setData] = useState(null);
+  const navigate=useNavigate();
   const disptach = useDispatch();
   const isloading = useSelector((state) => {
     return state.activity.isLoading;
@@ -39,7 +41,10 @@ const Geners = () => {
             <div>
               <i className="fa fa-play"></i> Play
             </div>
-            <div>
+            <div onClick={()=>{
+            navigate(`/netflix/0/1`)
+            window.location.reload();
+          }}>
               <i className="fa fa-exclamation"></i> More info
             </div>
           </div>

@@ -28,7 +28,7 @@ app.get("/getgeneres", async (req, res) => {
 app.get("/getmovies", async (req, res) => {
   console.log("getmovies");
   const { gener_id } = req.query;
-  console.log(typeof gener_id);
+  console.log(gener_id);
   const client = new MongoClient(uri);
   try {
     await client.connect();
@@ -44,7 +44,7 @@ app.get("/getmovies", async (req, res) => {
       return res.send(movies);
     } else {
       const movies = await collection
-        .find({ gener_id: Number(gener_id) })
+        .find({ gener_id: Number(gener_id) }).sort({id:1})
         .toArray();
       console.log(movies);
       return res.send(movies);
@@ -56,6 +56,24 @@ app.get("/getmovies", async (req, res) => {
   }
 });
 
+app.get("/getmovie", async (req, res) => {
+  console.log("getmovie");
+  const { movie_id } = req.query;
+  console.log(typeof movie_id);
+  const client = new MongoClient(uri);
+  try {
+    await client.connect();
+    const database = client.db("app-data");
+    const collection = await database.collection("Movies");
+     const movie = await collection.findOne({ id: Number(movie_id) });
+    console.log(movie);
+    return res.send(movie);
+  } catch (err) {
+    console.log(err);
+  } finally {
+    client.close();
+  }
+});
 app.listen(port, () => {
   console.log(`server is running on ${port}`);
 });

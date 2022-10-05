@@ -52,7 +52,7 @@ body {
   color: white;
 }
 
-.Header input {
+.Header input{
   padding: 7px 15px 7px 15px;
   margin-right: 10px;
   font-size: 15px;
@@ -61,6 +61,10 @@ body {
   border-radius: 3px;
   border: 0px;
   color: white;
+  transition: 0.3s all;
+}
+.Header input:hover{
+cursor: pointer;
 }
 
 .Header-image {
@@ -692,7 +696,9 @@ li {
   flex-direction: row;
   align-items: center;
 }
-
+.nav-left img:hover{
+cursor: pointer;
+}
 .nav-div {
   padding: 3px;
   font-size: 15px;
@@ -946,6 +952,10 @@ li {
   flex-direction: row;
   align-items: flex-start;
 }
+.fake-buttons div:hover{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.621);
+}
 
 .fake-buttons div {
   padding: 10px 20px 10px 20px;
@@ -1091,4 +1101,163 @@ li {
 
 .card-cont:nth-child(6n) {
   transform-origin: 0%;
+}.Browsescreencontainer.moviescreen .fake-buttons div:nth-child(2){
+display: none;
+}
+
+.moviewscreen-infocontainer{
+  display: flex;
+  position: relative;
+  z-index: 10;
+  font-size: 20;
+  flex-direction: row;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.moviewscreen-left ,.moviewscreen-right{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 50%;
+}
+.moviewscreen-right div , .moviewscreen-left div{
+  font-size: 17px;
+  padding: 8px 0px;
+}
+.moviewscreen-infocontainer span{
+  font-size: 17px;
+  padding-right: 10px;
+}
+.moviewscreen-right div span{
+  color: rgba(255, 255, 255, 0.386);
+  font-size: 14px;
+}
+.Info-card{
+  display: flex;
+  margin-left: 50px;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+}
+.Info-card p{
+  font-size: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.Info-card .infocard-container{
+  font-size: 15px;
+}
+.similar-header{
+  margin: 10px ;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-left: 50px;
+}
+.Info-card .infocard-container div{
+  padding: 7px 0px;
+  align-items: center;
+}
+.Info-card .infocard-container div span{
+  color:rgba(255, 255, 255, 0.386); 
+  font-size: 14px;
+}
+.mat{
+  border: 2px solid rgba(255, 255, 255, 0.386); ;
+ color: white !important;
+ padding: 3px;
+}
+
+/* ------------------ Authmodal ----------------- */
+.authmodal-main-cont
+{
+  display: flex;
+  position: relative;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.207);
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background:linear-gradient(rgba(0, 0, 0, 0.694),rgba(0, 0, 0, 0.623)), url("https://assets.nflxext.com/ffe/siteui/vlv3/b321426e-35ae-4661-b899-d63bca17648a/c6e22290-98e5-4eee-b72d-47156e4893fc/IN-en-20220926-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+}
+.authmodal-inner-cont{
+  display: flex;
+  justify-content:flex-start;
+  flex-direction: column;
+  align-items: center;
+border-radius: 5px;
+  width: 30%;
+  height: 80vh;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.716);
+}
+.authmodal-inner-cont input{
+  width: 70%;
+  padding: 17px;
+  font-size: 15px;
+  background-color: rgb(51,51,51);
+  border: none;
+  color: white;
+  outline: none;
+  margin: 15px 0px 0px 0px ;
+  border-radius: 5px;
+
+}
+.authmodal-inner-cont h1{
+  color: white;
+  font-weight: 700;
+  margin-top: 30px;
+  width: 76%;
+  font-size: 37px;
+}
+.authmodal-inner-cont input[type=button]{
+  background-color: white;
+  margin-top: 40px;
+  background-color: #e50914;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  padding: 17px;
+  width: 76%;
+}
+.authmodal-inner-cont p{
+  color: #737373;
+  margin-top: 40px;
+  width: 72%;
+}
+.authmodal-inner-cont p span{
+  color: white;
+  font-size: 17px;
+  
+}
+.authmodal-inner-cont p span:hover{
+  text-decoration: dashed;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.646);
+}
+.authmodal-main-cont img{
+  width: 150px;
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+.authmodal-main-cont i{
+  font-size: 20px;
+  background-color: #e50914;
+  border-radius: 50%;
+  padding: 10px 12px;
+  align-self: flex-end;
+
+  transform: translate(40%,-30%);
+  position: relative;
+  transition: 0.3s all;
+
+}
+.authmodal-main-cont i:hover{
+  color: white;
+  cursor: pointer;
 }

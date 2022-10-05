@@ -4,10 +4,9 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setIsloading } from "../Slice/activity";
 const MovieCard = ({ show_id, gener_id }) => {
-  const disptach = useDispatch();
   const navigation = useNavigate();
   const [data, setData] = useState(null);
-  const getGeneres = () => {
+  const getMovies = () => {
     const url = `http://localhost:8000/getmovies/?gener_id=${gener_id}`;
     fetch(url, { method: "Get" })
       .then((res) => {
@@ -18,14 +17,17 @@ const MovieCard = ({ show_id, gener_id }) => {
       });
   };
   useEffect(() => {
-    getGeneres();
+    getMovies();
   }, []);
 
   return (
     <div className="Movie-row">
       {data?.map((data, index) => {
         return (
-          <div className="card-cont" key={index}>
+          <div className="card-cont" key={index} onClick={()=>{
+            navigation(`/netflix/${data.id}/${data.gener_id}`)
+            window.location.reload();
+          }}>
             <img src={data.img_url} />
             <div className="card-info-cont">
               <div className="col1">
