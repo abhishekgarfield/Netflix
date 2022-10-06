@@ -1,4 +1,38 @@
+import { useState } from "react";
+import { useCookies } from "react-cookie";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
+  const [cookies, setCookie, removeCookie] = useCookies(`[user]`);
+  const navigate = useNavigate();
+  const isloading = useSelector((state) => {
+    return state.activity.isLoading;
+  });
+  const [error, setError] = useState(null);
+  const handleSubmit = () => {
+    const url = `http://localhost:8000/${isLogin ? "login" : "signup"}`;
+    fetch(url, { method: "Get" }).then((response) => {
+      if (response.status == 403) {
+        response.json().then((data) => {
+          setError(data);
+        });
+      } else if (response.status == 402) {
+        response.json().then((data) => {
+          setError(data);
+        });
+      }
+      if (response.status == 401) {
+        response.json().then((data) => {
+          setCookie("authToken", data.token);
+          setCookie("user_id", data.user_id);
+
+          navigate("/netflix");
+          window.location.reload();
+        });
+      }
+    });
+  };
   return (
     <div className="authmodal-main-cont">
       <img src="https://i.imgur.com/J2pPJxt.png" />
@@ -15,11 +49,12 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
         <input type="text" placeholder="Email" />
         <input type="password" placeholder="Password" />
         {!isLogin && <input type="password" placeholder="Confirm Password" />}
-        <input
-          type="button"
-          value={isLogin ? "Sign in" : "Sign up"}
-          onClick={() => {}}
-        />
+        <div className="submit-container" onClick={handleSubmit}>
+          {!isloading && (
+            <div className="vutton"> {isLogin ? "Sign in" : "Sign up"}</div>
+          )}
+          {isloading && <div className="loader"></div>}
+        </div>
         <p>
           New to Netflix?{" "}
           <span
