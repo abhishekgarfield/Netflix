@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useCookies } from "react-cookie";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { json, useNavigate } from "react-router-dom";
+import { setIsloading } from "../Slice/activity";
 
 const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
   const [cookies, setCookie, removeCookie] = useCookies(`[user]`);
   const navigate = useNavigate();
+  const disptach = useDispatch();
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -20,30 +22,33 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
   const handleSubmit = (e) => {
-    if (user.password == user.confirmpassword) {
+    if  (user.password == user.confirmpassword || isLogin) {
+      setError(null);
       console.log(user);
-      /*
-    const url = `http://localhost:8000/${isLogin ? "login" : "signup"}`;
-    fetch(url, { method: "Post" }).then((response) => {
-      if (response.status == 403) {
-        response.json().then((data) => {
-          setError(data);
-        });
-      } else if (response.status == 402) {
-        response.json().then((data) => {
-          setError(data);
-        });
-      }
-      if (response.status == 401) {
-        response.json().then((data) => {
-          setCookie("authToken", data.token);
-          setCookie("user_id", data.user_id);
-          navigate("/netflix");
-          window.location.reload();
-        });
-      }
-    });
-    */
+      disptach(setIsloading(true));
+
+      const url = `http://localhost:8000/${isLogin ? "login" : "signup"}`;
+      console.log(url);
+      fetch(url, {
+        method: "Post",
+        headers: { "Content-type": "Application/json" },
+        body: JSON.stringify({user}),
+      }).then((response) => {
+        if (response.status == 402) {
+          response.json().then((data) => {
+            setError(data);
+            disptach(setIsloading(false));
+          });
+        } else if (response.status == 200) {
+          response.json().then((data) => {
+            setCookie("authToken", data.token);
+            setCookie("user_id", data.user_id);
+            disptach(setIsloading(false));
+            navigate("/netflix");
+            window.location.reload();
+          });
+        }
+      });
     } else if (user.password != user.confirmpassword) {
       setError("Passwords don't match");
     }

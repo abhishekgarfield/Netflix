@@ -2,9 +2,12 @@ import Frequent from "../Components/Frequent.js";
 import Footer from "../Components/Footer.js";
 import AuthModal from "../Components/AuthModal.js";
 import { useState } from "react";
+import { useCookies } from "react-cookie";
 const AuthScreen = () => {
   const [isLogin, setislogin] = useState(true);
   const [isAuthmodal, setIsauthmodal] = useState(true);
+  const [cookies,setCookie,removeCookie]=useCookies(`[user]`);
+  const authToken=cookies.authModal;
   return (
     <>
       {" "}
@@ -23,10 +26,17 @@ const AuthScreen = () => {
                 <input
                   type="button"
                   onClick={() => {
+                    if(!authToken)
+                    {
                     setIsauthmodal(true);
                     setislogin(true);
+                    }
+                    else{
+                      removeCookie("authToken",cookies.authToken);
+                      window.location.reload();
+                    }
                   }}
-                  value="Sign in"
+                  value={ authToken?"Signout":"Sign in"}
                 />
               </div>
             </div>
