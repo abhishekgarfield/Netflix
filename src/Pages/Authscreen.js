@@ -32,9 +32,11 @@ const AuthScreen = () => {
                     setislogin(true);
                     }
                     else{
+                      console.log("here");
                       e.preventDefault();
-                      removeCookie("user_id",cookies.user_id);
-                      removeCookie("AuthToken",cookies.authToken);
+                      removeCookie("user_id",{path:"/"});
+                      removeCookie("authToken",{path:"/"});
+                      window.location.reload();
               
                     }
                   }}

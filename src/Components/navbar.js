@@ -76,17 +76,25 @@ const Navbar = () => {
             >
               Tv shows
             </div>
-            <div className="nav-div" onClick={()=>{
-              removeCookie("authToken");
-              removeCookie("user_id")
-            }}>My list</div>
+            <div className="nav-div" >My list</div>
           </div>
           <div className="nav-right">
             <div className="nav-div">
               <i className="fa fa-search"></i>
             </div>
             <div className="nav-div" id="logout">
-              <div style={{alignItems:"center",display:"flex"}}>
+              <div style={{alignItems:"center",display:"flex"}} onClick={()=>{
+                var el=document.querySelector(".profile-drop")
+                {
+                    if(el.style.display=="none")
+                    {
+                      el.style.display="flex";
+                    }
+                    else{
+                      el.style.display="none";
+                    }
+                }
+              }}>
               <img src={user?.profile_pic} />
               <span className="fa fa-chevron-down"></span>
               </div>
@@ -95,10 +103,12 @@ const Navbar = () => {
                   <img src={user?.profile_pic}/>
                   {user?.email}
                 </div>
-                <div onClick={()=>{
-                  console.log("here");
-                  removeCookie("authToken",cookies.authToken);
-                  removeCookie("user_id",cookies.user_id);
+                <div onClick={(e)=>{
+                  e.preventDefault();
+                  removeCookie("user_id",{path:"/"});
+                  removeCookie("authToken",{path:"/"});
+                  navigate("/");
+                  window.location.reload();
                  
                 }} className="logout">Signout</div>
               </div>
