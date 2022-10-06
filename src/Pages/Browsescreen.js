@@ -6,7 +6,7 @@ import Navbar from "../Components/navbar";
 import { setIsloading } from "../Slice/activity";
 
 const Browsescreen = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const disptach = useDispatch();
   const isloading = useSelector((state) => {
     return state.activity.isLoading;
@@ -51,9 +51,11 @@ const Browsescreen = () => {
                 <div>
                   <i className="fa fa-play"></i> Play
                 </div>
-                <div onClick={()=>{
-            navigate(`/netflix/${data[0].id}/${data[0].gener_id}`)
-          }}>
+                <div
+                  onClick={() => {
+                    navigate(`/netflix/${data[0].id}/${data[0].gener_id}`);
+                  }}
+                >
                   <i className="fa fa-exclamation"></i> More info
                 </div>
               </div>
@@ -70,10 +72,14 @@ const Browsescreen = () => {
           <div className="browse-movie-container">
             {data?.map((data, index) => {
               return (
-                <div className="card-cont" onClick={()=>{
-                  navigate(`/netflix/${data.id}/${data.gener_id}`)
-                  window.location.reload();
-                }} key={index}>
+                <div
+                  className="card-cont"
+                  onClick={() => {
+                    navigate(`/netflix/${data.id}/${data.gener_id}`);
+                    window.location.reload();
+                  }}
+                  key={index}
+                >
                   <img src={data.img_url} />
                   <div className="card-info-cont">
                     <div className="col1">

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [cookies, setCookie, removeCookie] = useCookies(`[user]`);
   const user_id = cookies.user_id;
-  console.log(cookies.authToken)
+  console.log(cookies.authToken);
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
   const getUser = () => {
@@ -32,7 +32,6 @@ const Navbar = () => {
         document.querySelector(".navbar-container").style.background =
           "linear-gradient(rgba(0, 0, 0, 0.865),rgba(0, 0, 0, 0))";
       }
-     
     });
     getUser();
   }, []);
@@ -76,41 +75,42 @@ const Navbar = () => {
             >
               Tv shows
             </div>
-            <div className="nav-div" >My list</div>
+            <div className="nav-div">My list</div>
           </div>
           <div className="nav-right">
             <div className="nav-div">
               <i className="fa fa-search"></i>
             </div>
             <div className="nav-div" id="logout">
-              <div style={{alignItems:"center",display:"flex"}} onClick={()=>{
-                var el=document.querySelector(".profile-drop")
-                {
-                    if(el.style.display=="none")
-                    {
-                      el.style.display="flex";
-                    }
-                    else{
-                      el.style.display="none";
-                    }
-                }
-              }}>
-              <img src={user?.profile_pic} />
-              <span className="fa fa-chevron-down"></span>
+              <div
+                style={{ alignItems: "center", display: "flex" }}
+                onClick={() => {
+                  var el = document.querySelector(".profile-drop");
+                  {
+                    el.classList.toggle("disappear");
+                  }
+                }}
+              >
+                <img src={user?.profile_pic} />
+                <span className="fa fa-chevron-down"></span>
               </div>
               <div className="profile-drop">
                 <div className="profile-pic-email">
-                  <img src={user?.profile_pic}/>
+                  <img src={user?.profile_pic} />
                   {user?.email}
                 </div>
-                <div onClick={(e)=>{
-                  e.preventDefault();
-                  removeCookie("user_id",{path:"/"});
-                  removeCookie("authToken",{path:"/"});
-                  navigate("/");
-                  window.location.reload();
-                 
-                }} className="logout">Signout</div>
+                <div
+                  onClick={(e) => {
+                    e.preventDefault();
+                    removeCookie("user_id", { path: "/" });
+                    removeCookie("authToken", { path: "/" });
+                    navigate("/");
+                    window.location.reload();
+                  }}
+                  className="logout"
+                >
+                  Signout
+                </div>
               </div>
             </div>
           </div>
