@@ -88,11 +88,13 @@ const Navbar = () => {
                   console.log(el2.value);
                   if (el2.value.length > 0) {
                     console.log(el2.value);
-                    navigate(`/netflix/browse/2001${el2.value}`);
+                    navigate(`/netflix/browse/search=${el2.value}`);
+                    window.location.reload();
                   }
                 }}
               ></i>
               <input
+                placeholder="search"
                 type="text"
                 id="searchstring"
                 onBlur={(e) => {
