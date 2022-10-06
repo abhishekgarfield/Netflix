@@ -6,11 +6,22 @@ import { useNavigate } from "react-router-dom";
 const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
   const [cookies, setCookie, removeCookie] = useCookies(`[user]`);
   const navigate = useNavigate();
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+    confirmpassword: "",
+    url:""
+  });
   const isloading = useSelector((state) => {
     return state.activity.isLoading;
   });
   const [error, setError] = useState(null);
-  const handleSubmit = () => {
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = (e) => {
+    console.log(user);
+    /*
     const url = `http://localhost:8000/${isLogin ? "login" : "signup"}`;
     fetch(url, { method: "Get" }).then((response) => {
       if (response.status == 403) {
@@ -26,12 +37,12 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
         response.json().then((data) => {
           setCookie("authToken", data.token);
           setCookie("user_id", data.user_id);
-
           navigate("/netflix");
           window.location.reload();
         });
       }
     });
+    */
   };
   return (
     <div className="authmodal-main-cont">
@@ -46,9 +57,41 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
           {" "}
         </i>
         <h1>{isLogin ? "Sign in" : "Sign up"}</h1>
-        <input type="text" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        {!isLogin && <input type="password" placeholder="Confirm Password" />}
+        <input
+          type="text"
+          placeholder="Email"
+          value={user.email}
+          name="email"
+          onChange={(e) => handleChange(e)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={user.password}
+          name="password"
+          onChange={(e) => handleChange(e)}
+        />
+        {!isLogin && (
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            value={user.confirmpassword}
+            name="confirmpassword"
+            onChange={(e) => handleChange(e)}
+          />
+
+        )}
+         {!isLogin && (
+          <input
+            type="url"
+            placeholder="Profile pic"
+            value={user.url}
+            name="url"
+            onChange={(e) => handleChange(e)}
+          />
+          
+        )}
+        {error && <div>error</div>}
         <div className="submit-container" onClick={handleSubmit}>
           {!isloading && (
             <div className="vutton"> {isLogin ? "Sign in" : "Sign up"}</div>

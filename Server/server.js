@@ -1,12 +1,41 @@
 var express = require("express");
 var cors = require("cors");
 var app = express();
+var bcrypt=require("bcrypt");
+const { paste } = require("@testing-library/user-event/dist/paste");
+const { response } = require("express");
+const {v4}=require("uuid");
 app.use(express.json());
 app.use(cors());
 require("dotenv").config();
 var MongoClient = require("mongodb").MongoClient;
 var uri = process.env.uri;
 const port = process.env.Port;
+
+app.get("/login", async (req, res) => {
+  console.log("login");
+  const client = new MongoClient(uri);
+  try {
+    await client.connect();
+    const database = client.db("app-data");
+    const collection = await database.collection("users");
+    const user_id=v4();
+    const hashedpassword=await bcrypt.hash(10,user.password);
+    const filtereduser={
+      user_id:user_id,
+      password:hashedpassword,
+      email:user.email,
+      profile_pic:user.url
+    }
+    const resposne=await collection.insertOne(filtereduser);
+    console.log(resposne);
+    res.send(response);
+  } catch (err) {
+    console.log(err);
+  } finally {
+    client.close();
+  }
+});
 
 app.get("/getgeneres", async (req, res) => {
   console.log("geners");

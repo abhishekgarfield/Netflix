@@ -1211,17 +1211,19 @@ border-radius: 5px;
   width: 76%;
   font-size: 37px;
 }
-.authmodal-inner-cont input[type=button]{
-  background-color: white;
-  margin-top: 40px;
-  background-color: #e50914;
+.authmodal-inner-cont .vutton{
+  text-align: center;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   outline: none;
   border: none;
-  padding: 17px;
-  width: 76%;
+  border-radius: 5px;
+  transition: 0.2s all;
+}
+.authmodal-inner-cont .submit-container:hover{
+  cursor: pointer;
+  background-color: #f01b25;
 }
 .authmodal-inner-cont p{
   color: #737373;
@@ -1244,6 +1246,34 @@ border-radius: 5px;
   position: absolute;
   top: 30px;
   left: 50px;
+}
+.submit-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-top: 40px;
+  text-align: center;
+  background-color: #e50914;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 17px;
+  width: 70%;
+  transition: 0.2s all;
+}
+.submit-container .loader{
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: 0rem;
+  z-index: 29;
+  animation: loadt 1s linear infinite;
+  border-top: 2px solid black;
 }
 .authmodal-main-cont i{
   font-size: 20px;
