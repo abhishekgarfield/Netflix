@@ -10,7 +10,7 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
     email: "",
     password: "",
     confirmpassword: "",
-    url:""
+    url: "",
   });
   const isloading = useSelector((state) => {
     return state.activity.isLoading;
@@ -20,10 +20,11 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
   const handleSubmit = (e) => {
-    console.log(user);
-    /*
+    if (user.password == user.confirmpassword) {
+      console.log(user);
+      /*
     const url = `http://localhost:8000/${isLogin ? "login" : "signup"}`;
-    fetch(url, { method: "Get" }).then((response) => {
+    fetch(url, { method: "Post" }).then((response) => {
       if (response.status == 403) {
         response.json().then((data) => {
           setError(data);
@@ -43,6 +44,9 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
       }
     });
     */
+    } else if (user.password != user.confirmpassword) {
+      setError("Passwords don't match");
+    }
   };
   return (
     <div className="authmodal-main-cont">
@@ -79,9 +83,8 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
             name="confirmpassword"
             onChange={(e) => handleChange(e)}
           />
-
         )}
-         {!isLogin && (
+        {!isLogin && (
           <input
             type="url"
             placeholder="Profile pic"
@@ -89,9 +92,8 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
             name="url"
             onChange={(e) => handleChange(e)}
           />
-          
         )}
-        {error && <div>error</div>}
+        {error && <div className="error-cont">{error}</div>}
         <div className="submit-container" onClick={handleSubmit}>
           {!isloading && (
             <div className="vutton"> {isLogin ? "Sign in" : "Sign up"}</div>

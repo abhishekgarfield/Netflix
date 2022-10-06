@@ -1291,3 +1291,10 @@ border-radius: 5px;
   color: white;
   cursor: pointer;
 }
+
+.error-cont{
+  color: red;
+  text-align: left;
+  width: 75%;
+  margin-top: 10px;
+}

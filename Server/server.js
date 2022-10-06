@@ -2,8 +2,6 @@ var express = require("express");
 var cors = require("cors");
 var app = express();
 var bcrypt=require("bcrypt");
-const { paste } = require("@testing-library/user-event/dist/paste");
-const { response } = require("express");
 const {v4}=require("uuid");
 app.use(express.json());
 app.use(cors());
@@ -12,8 +10,8 @@ var MongoClient = require("mongodb").MongoClient;
 var uri = process.env.uri;
 const port = process.env.Port;
 
-app.get("/login", async (req, res) => {
-  console.log("login");
+app.post("/signup", async (req, res) => {
+  console.log("signup");
   const client = new MongoClient(uri);
   try {
     await client.connect();
@@ -27,9 +25,9 @@ app.get("/login", async (req, res) => {
       email:user.email,
       profile_pic:user.url
     }
-    const resposne=await collection.insertOne(filtereduser);
-    console.log(resposne);
-    res.send(response);
+    const result=await collection.insertOne(filtereduser);
+    console.log(result);
+    res.send(result);
   } catch (err) {
     console.log(err);
   } finally {
