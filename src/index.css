@@ -1355,3 +1355,35 @@ border-radius: 5px;
    padding: 10px;
    border-radius: 5px;
 }
+
+/* search container */
+
+.search-cont{
+  display: flex;
+  background-color: transparent;
+  border-color: aquamarine;
+  align-items: center;
+  padding: 8px 10px 10px 8px ;
+  border-radius: 5px;
+}
+.search-cont .fa.fa-search{
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.search-cont input{
+  display: none;
+}
+.nav-div.hello{
+  background-color: transparent;
+  background-color: rgba(20, 20, 20, 0.591);
+  align-items: center;
+}
+.nav-div.hello input{
+  outline: none;
+  display: flex;
+  font-size: 17px;
+  border: none;
+  display: block;
+  width: 15rem;
+  padding: 2px;
+}

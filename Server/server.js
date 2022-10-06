@@ -118,28 +118,36 @@ app.get("/getgeneres", async (req, res) => {
 app.get("/getmovies", async (req, res) => {
   console.log("getmovies");
   const { gener_id } = req.query;
-  console.log(gener_id);
+  const filteredgener_id=parseInt(gener_id)
+  console.log(filteredgener_id)
   const client = new MongoClient(uri);
   try {
     await client.connect();
     const database = client.db("app-data");
     const collection = await database.collection("Movies");
-    if (Number(gener_id == 100)) {
+    if ((filteredgener_id == 100)) {
       const movies = await collection.find({ show_id: 1 }).toArray();
       console.log(movies);
       return res.send(movies);
-    } else if (Number(gener_id == 100)) {
+    } else if ((filteredgener_id == 100)) {
       const movies = await collection.find({ show_id: 2 }).toArray();
       console.log(movies);
       return res.send(movies);
-    } else {
+    }
+    else if(filteredgener_id=="2001"){
+      console.log("IN STRING")
+      const movies = await collection.find({ name: {$regex: `(^(${gener_id.slice(4)}.*)$)`,$options:"i" }}).toArray();
+      console.log(movies);
+      return res.send(movies);
+    }else  {
       const movies = await collection
-        .find({ gener_id: Number(gener_id) })
+        .find({ gener_id: (filteredgener_id) })
         .sort({ id: 1 })
         .toArray();
       console.log(movies);
       return res.send(movies);
-    }
+     
+    } 
   } catch (err) {
     console.log(err);
   } finally {

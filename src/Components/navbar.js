@@ -88,7 +88,7 @@ const Navbar = () => {
                   console.log(el2.value);
                   if (el2.value.length > 0) {
                     console.log(el2.value);
-                    navigate(`/netflix/browse/${el2.value}`);
+                    navigate(`/netflix/browse/2001${el2.value}`);
                   }
                 }}
               ></i>
