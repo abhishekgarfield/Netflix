@@ -1387,3 +1387,33 @@ border-radius: 5px;
   width: 15rem;
   padding: 2px;
 }
+
+/* ----------- error-container -----------*/
+.hjk{
+  background-color: #141414cf;
+  padding: 2rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error-container{
+  height: 100vh;
+  display: flex;
+  align-items: center;justify-content: center;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.861), rgba(0, 0, 0, 0.348), rgb(0, 0, 0)), url("https://assets.nflxext.com/ffe/siteui/vlv3/b321426e-35ae-4661-b899-d63bca17648a/c6e22290-98e5-4eee-b72d-47156e4893fc/IN-en-20220926-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+  flex-direction: column;
+  color: #e50914;
+}
+.error-container img{
+  width: 20vw;
+  height: 10vh;
+}
+.error-container h1{
+  margin: 0rem;
+}
+.error-container i{
+  font-size: 2rem;
+  margin-left: 10px;
+}
