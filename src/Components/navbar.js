@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [cookies, setCookie, removeCookie] = useCookies(`[user]`);
   const user_id = cookies.user_id;
-  console.log(cookies.authToken);
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
   const getUser = () => {
@@ -78,8 +77,31 @@ const Navbar = () => {
             <div className="nav-div">My list</div>
           </div>
           <div className="nav-right">
-            <div className="nav-div">
-              <i className="fa fa-search"></i>
+            <div className="nav-div search-cont ">
+              <i
+                className="fa fa-search"
+                accessKey="k"
+                onClick={() => {
+                  var el = document.querySelector(".search-cont");
+                  el.classList.add("hello");
+                  var el2 = document.querySelector("#searchstring");
+                  console.log(el2.value);
+                  if (el2.value.length > 0) {
+                    console.log(el2.value);
+                    navigate(`/netflix/browse/${el2.value}`);
+                  }
+                }}
+              ></i>
+              <input
+                type="text"
+                id="searchstring"
+                onBlur={(e) => {
+                  if (e.target.value.length == 0) {
+                    var el = document.querySelector(".search-cont");
+                    el.classList.remove("hello");
+                  }
+                }}
+              />
             </div>
             <div className="nav-div" id="logout">
               <div
