@@ -5,9 +5,9 @@ import { useState } from "react";
 import { useCookies } from "react-cookie";
 const AuthScreen = () => {
   const [isLogin, setislogin] = useState(true);
-  const [isAuthmodal, setIsauthmodal] = useState(true);
+  const [isAuthmodal, setIsauthmodal] = useState(false);
   const [cookies,setCookie,removeCookie]=useCookies(`[user]`);
-  const authToken=cookies.authModal;
+  const authToken=cookies.authToken;
   return (
     <>
       {" "}
@@ -25,15 +25,17 @@ const AuthScreen = () => {
                 </select>
                 <input
                   type="button"
-                  onClick={() => {
+                  onClick={(e) => {
                     if(!authToken)
                     {
                     setIsauthmodal(true);
                     setislogin(true);
                     }
                     else{
-                      removeCookie("authToken",cookies.authToken);
-                      window.location.reload();
+                      e.preventDefault();
+                      removeCookie("user_id",cookies.user_id);
+                      removeCookie("AuthToken",cookies.authToken);
+              
                     }
                   }}
                   value={ authToken?"Signout":"Sign in"}

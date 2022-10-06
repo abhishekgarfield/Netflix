@@ -4,6 +4,7 @@ import HomeScreen from "./Pages/HomeScreen";
 import Browsescreen from "./Pages/Browsescreen";
 import Moviescreen from "./Pages/Moviescreen";
 import { Provider } from "react-redux";
+import { CookiesProvider } from "react-cookie";
 import Store from "./Store";
 const App = () => {
   return (

@@ -22,7 +22,7 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
   const handleSubmit = (e) => {
-    if  (user.password == user.confirmpassword || isLogin) {
+    if (user.password == user.confirmpassword || isLogin) {
       setError(null);
       console.log(user);
       disptach(setIsloading(true));
@@ -32,15 +32,16 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
       fetch(url, {
         method: "Post",
         headers: { "Content-type": "Application/json" },
-        body: JSON.stringify({user}),
+        body: JSON.stringify({ user }),
       }).then((response) => {
-        if (response.status == 402) {
+        if (response.status == 403) {
           response.json().then((data) => {
-            setError(data);
+            setError(data.error);
             disptach(setIsloading(false));
           });
         } else if (response.status == 200) {
           response.json().then((data) => {
+            console.log(data);
             setCookie("authToken", data.token);
             setCookie("user_id", data.user_id);
             disptach(setIsloading(false));
@@ -98,7 +99,15 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
             onChange={(e) => handleChange(e)}
           />
         )}
-        {error && <div className="error-cont">{error}</div>}
+        {error && (
+          <div className="error-cont">
+            <span
+              className="fa fa-exclamation"
+              style={{ paddingRight: 5 }}
+            ></span>
+            {error}
+          </div>
+        )}
         <div className="submit-container" onClick={handleSubmit}>
           {!isloading && (
             <div className="vutton"> {isLogin ? "Sign in" : "Sign up"}</div>

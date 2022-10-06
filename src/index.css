@@ -1298,3 +1298,50 @@ border-radius: 5px;
   width: 75%;
   margin-top: 10px;
 }
+
+/* navbar sigin out */
+
+.profile-drop{
+   display: none;
+   flex-direction: column;
+   position: absolute;
+   top: 45px;
+   right: 2px;
+   background-color: #14141479;
+   padding: 10px;
+   border-radius: 5px;
+}
+.profile-drop .profile-pic-email{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+.logout{
+  background-color: #e50914;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  color: white;
+  align-items: center;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+#logout{
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+#logout img{
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+#logout:hover .profile-drop{
+display: flex;
+}

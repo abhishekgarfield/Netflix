@@ -22,7 +22,7 @@ app.post("/signup", async (req, res) => {
     const collection = await database.collection("users");
     const user_id = v4();
     const sentitizedEmail = user.email.toLowerCase();
-    const hashedpassword = await bcrypt.hash( user.password,10);
+    const hashedpassword = await bcrypt.hash(user.password, 10);
     const filtereduser = {
       user_id: user_id,
       password: hashedpassword,
@@ -31,14 +31,14 @@ app.post("/signup", async (req, res) => {
     };
     const resp = await collection.findOne({ email: sentitizedEmail });
     if (resp) {
-      return res.status(403).json("User already exists !");
+      return res.status(403).json({ error: "User already exists !" });
     } else {
       const result = await collection.insertOne(filtereduser);
       const token = jwt.sign(result, user.email, {
         expiresIn: 60 * 24,
       });
       console.log(result);
-      res.status(200).json({ token, user_id });
+      res.status(200).json({ token: token, user_id: user_id });
     }
   } catch (err) {
     console.log(err);
@@ -58,24 +58,39 @@ app.post("/login", async (req, res) => {
     const collection = await database.collection("users");
 
     const sentitizedEmail = user.email.toLowerCase();
- 
+
     const resp = await collection.findOne({ email: sentitizedEmail });
     if (resp) {
-      const checkPassword= await bcrypt.compare(user.password,resp.password);
-      if(checkPassword)
-      {
+      const checkPassword = await bcrypt.compare(user.password, resp.password);
+      if (checkPassword) {
         const token = jwt.sign(resp, user.email, {
           expiresIn: 60 * 24,
         });
-      return res.status(200).json(token,resp.user_id);
-      }
-      else{
-        return res.status(403).send("Password is incorrect !");
+        return res.status(200).json({ token: token, user_id: resp.user_id });
+      } else {
+        return res.status(403).json({ error: "Password is incorrect !" });
       }
     } else {
-      
-       res.status(403).send("User doesnt Exist , please sign up !");
+      res.status(403).json({ error: "User doesnt Exist , please sign up !" });
     }
+  } catch (err) {
+    console.log(err);
+  } finally {
+    client.close();
+  }
+});
+app.get("/user", async (req, res) => {
+  console.log("user");
+  const{user_id}=req.query;
+  console.log(user_id);
+  const client = new MongoClient(uri);
+  try {
+    await client.connect();
+    const database = client.db("app-data");
+    const collection = await database.collection("users");
+    const user = await collection.findOne({user_id:user_id});
+    console.log(user);
+    res.send(user);
   } catch (err) {
     console.log(err);
   } finally {
