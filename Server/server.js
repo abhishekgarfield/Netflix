@@ -134,9 +134,9 @@ app.get("/getmovies", async (req, res) => {
       console.log(movies);
       return res.send(movies);
     }
-    else if(filteredgener_id=="2001"){
+    else if(gener_id.slice(0,6)=="search"){
       console.log("IN STRING")
-      const movies = await collection.find({ name: {$regex: `(^(${gener_id.slice(4)}.*)$)`,$options:"i" }}).toArray();
+      const movies = await collection.find({ name: {$regex: `(^(${gener_id.slice(7)}.*)$)`,$options:"i" }}).toArray();
       console.log(movies);
       return res.send(movies);
     }else  {
