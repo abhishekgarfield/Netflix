@@ -37,7 +37,7 @@ const Browsescreen = () => {
             className="wrapperimage"
             style={{
               background: `linear-gradient(180deg, hsla(0, 0%, 8%, 0) 0, hsla(0, 0%, 8%, .15) 15%, hsla(0, 0%, 8%, .35) 29%, hsla(0, 0%, 8%, .58) 44%, #141414), url(${
-                data.length > 0
+                data?.length > 0
                   ? data[0]?.wrapper_imgurl
                   : "https://assets.nflxext.com/ffe/siteui/vlv3/b321426e-35ae-4661-b899-d63bca17648a/c6e22290-98e5-4eee-b72d-47156e4893fc/IN-en-20220926-popsignuptwoweeks-perspective_alpha_website_large.jpg"
               }) no-repeat `,
