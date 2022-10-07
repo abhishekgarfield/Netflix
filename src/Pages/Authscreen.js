@@ -33,6 +33,8 @@ const AuthScreen = () => {
                       e.preventDefault();
                       removeCookie("user_id", { path: "/" });
                       removeCookie("authToken", { path: "/" });
+                      removeCookie("user_id", { path: "/Netflix" });
+                      removeCookie("authToken", { path: "/Netflix" });
                       window.location.reload();
                     }
                   }}

@@ -126,8 +126,11 @@ const Navbar = () => {
                 <div
                   onClick={(e) => {
                     e.preventDefault();
+                    
                     removeCookie("user_id", { path: "/" });
                     removeCookie("authToken", { path: "/" });
+                    removeCookie("user_id", { path: "/Netflix" });
+                    removeCookie("authToken", { path: "/Netflix" });
                     navigate("/");
                     window.location.reload();
                   }}
