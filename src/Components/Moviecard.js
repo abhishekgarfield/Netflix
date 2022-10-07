@@ -6,7 +6,7 @@ const MovieCard = ({ show_id, gener_id }) => {
   const navigation = useNavigate();
   const [data, setData] = useState(null);
   const getMovies = () => {
-    const url = `http://localhost:8000/getmovies/?gener_id=${gener_id}`;
+    const url = `https://netflix2789.herokuapp.com/getmovies/?gener_id=${gener_id}`;
     fetch(url, { method: "Get" })
       .then((res) => {
         return res.json();

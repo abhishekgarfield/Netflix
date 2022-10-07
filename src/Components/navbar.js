@@ -9,7 +9,7 @@ const Navbar = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
   const getUser = () => {
-    const url = `http://localhost:8000/user/?user_id=${user_id}`;
+    const url = `https://netflix2789.herokuapp.com/user/?user_id=${user_id}`;
     fetch(url, { method: "Get" })
       .then((res) => {
         return res.json();
