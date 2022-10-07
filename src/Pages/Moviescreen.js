@@ -65,7 +65,9 @@ const Moviescreen = () => {
               </p>
               <div className="fake-buttons">
                 <div>
-                  <i className="fa fa-play"></i> Play
+                  <i className="fa fa-play" onClick={()=>{
+                    navigation(`/netflix/movie/${data.id}`)
+                  }}></i> Play
                 </div>
                 <div>
                   <i className="fa fa-exclamation"></i> More info

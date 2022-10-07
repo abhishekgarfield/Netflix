@@ -4,6 +4,7 @@ import HomeScreen from "./Pages/HomeScreen";
 import Browsescreen from "./Pages/Browsescreen";
 import Moviescreen from "./Pages/Moviescreen";
 import { Provider } from "react-redux";
+import ViewMovie from "./Pages/ViewMovie";
 import { CookiesProvider, useCookies } from "react-cookie";
 import Store from "./Store";
 import Notfound from "./Pages/Notfound";
@@ -26,9 +27,10 @@ const App = () => {
                 path="/netflix/:movie_id/:gener_id"
                 element={<Moviescreen />}
               />
+              <Route path="/netflix/movie/:movie_id" element={<ViewMovie />} />
             </>
           )}
-          <Route path="*" element={<Notfound/>} />
+          <Route path="*" element={<Notfound />} />
         </Routes>
       </BrowserRouter>
     </Provider>

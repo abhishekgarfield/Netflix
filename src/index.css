@@ -1417,3 +1417,31 @@ border-radius: 5px;
   font-size: 2rem;
   margin-left: 10px;
 }
+
+/* --------------- video-container ------------*/
+.video-player{
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  background-color: rgb(20, 20, 20);
+}
+.video-player i{
+  display: flex;
+  position: absolute;
+  align-self: flex-start;
+  left: 20px;
+  top: 20px;
+  font-size: 25px ;
+  font-weight: 900;
+  border-radius: 50%;
+  padding: 10px 10px 10px 10px;
+  z-index: 20;
+}
+.video-player i:hover{
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgba(71, 69, 69, 0.713);
+}
