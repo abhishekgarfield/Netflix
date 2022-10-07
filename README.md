@@ -13,7 +13,7 @@
 
 
 
-## Website : https://abhishekgarfield.github.io/Netflix/
+## Website : https://netflixgarfield.netlify.app/
 ## Website demo video : https://youtu.be/7OTF2s47Ml8
 
 ### Authscreen 
