@@ -14,7 +14,7 @@ const ViewMovie = () => {
   const [data, setData] = useState(null);
   const getMovie = () => {
     disptach(setIsloading(true));
-    const url = `http://localhost:8000/getmovie/?movie_id=${movie_id}`;
+    const url = `https://netflix2789.herokuapp.com/getmovie/?movie_id=${movie_id}`;
     fetch(url, { method: "Get" })
       .then((res) => {
         return res.json();

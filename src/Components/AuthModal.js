@@ -27,7 +27,7 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
       console.log(user);
       disptach(setIsloading(true));
 
-      const url = `http://localhost:8000/${isLogin ? "login" : "signup"}`;
+      const url = `https://netflix2789.herokuapp.com/${isLogin ? "login" : "signup"}`;
       console.log(url);
       fetch(url, {
         method: "Post",

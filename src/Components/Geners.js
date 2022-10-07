@@ -13,7 +13,7 @@ const Geners = () => {
   });
   const getGeneres = () => {
     disptach(setIsloading(true));
-    const url = "http://localhost:8000/getgeneres";
+    const url = "https://netflix2789.herokuapp.com/getgeneres";
     fetch(url, { method: "Get" })
       .then((res) => {
         return res.json();
