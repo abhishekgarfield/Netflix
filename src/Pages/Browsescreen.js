@@ -75,6 +75,8 @@ const Browsescreen = () => {
                 ? gener_id == 100
                   ? "Movies"
                   : "Tv Shows"
+                : gener_id.slice(0, 6) == "search"
+                ? `Search results for "${gener_id.slice(7)}"`
                 : data && data[0].generes[0]
               : " oops ! No shows found"}
           </div>
