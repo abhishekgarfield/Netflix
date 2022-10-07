@@ -16,7 +16,7 @@ app.get("/insert", async (req, res) => {
     await client.connect();
     const database = client.db("app-data");
     const movies = database.collection("Movies");
-    const response = await movies.insertMany([]);
+    const response = await movies.updateMany({show_id:2},{$set:{"video_url":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"}});
     console.log(response);
     res.send("done");
   } catch (err) {

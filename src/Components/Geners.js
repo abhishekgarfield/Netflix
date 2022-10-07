@@ -38,7 +38,9 @@ const Geners = () => {
             pre-independent India.
           </p>
           <div className="fake-buttons">
-            <div>
+            <div onClick={()=>{
+                    navigate(`/netflix/movie/0`)
+                  }}>
               <i className="fa fa-play"></i> Play
             </div>
             <div onClick={()=>{

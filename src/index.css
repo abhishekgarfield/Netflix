@@ -1428,6 +1428,9 @@ border-radius: 5px;
   width: 100vw;
   background-color: rgb(20, 20, 20);
 }
+.video-player video{
+  outline: none;
+}
 .video-player i{
   display: flex;
   position: absolute;

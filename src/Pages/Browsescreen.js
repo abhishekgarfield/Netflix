@@ -54,7 +54,9 @@ const Browsescreen = () => {
               )}
               {data?.length > 0 && (
                 <div className="fake-buttons">
-                  <div>
+                  <div onClick={()=>{
+                    navigate(`/netflix/movie/${data[0].id}`)
+                  }}>
                     <i className="fa fa-play"></i> Play
                   </div>
                   <div
