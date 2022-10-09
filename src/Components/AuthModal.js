@@ -24,11 +24,10 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
   const handleSubmit = (e) => {
     if (user.password == user.confirmpassword || isLogin) {
       setError(null);
-      console.log(user);
       disptach(setIsloading(true));
 
       const url = `https://netflix2789.herokuapp.com/${isLogin ? "login" : "signup"}`;
-      console.log(url);
+      
       fetch(url, {
         method: "Post",
         headers: { "Content-type": "Application/json" },
@@ -41,7 +40,6 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
           });
         } else if (response.status == 200) {
           response.json().then((data) => {
-            console.log(data);
             setCookie("authToken", data.token);
             setCookie("user_id", data.user_id);
             disptach(setIsloading(false));

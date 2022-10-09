@@ -22,7 +22,6 @@ const Browsescreen = () => {
       })
       .then((data) => {
         setData(data);
-        console.log(data.length);
         disptach(setIsloading(false));
       });
   };

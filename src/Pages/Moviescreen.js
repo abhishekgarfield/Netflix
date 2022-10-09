@@ -12,7 +12,6 @@ const Moviescreen = () => {
     return state.activity.isLoading;
   });
   const { movie_id, gener_id } = useParams();
-  console.log(gener_id)
   const [data, setData] = useState(null);
   const [similar, setSimilar] = useState(null);
   const getMovie = () => {
@@ -23,7 +22,6 @@ const Moviescreen = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setData(data);
         disptach(setIsloading(false));
       });

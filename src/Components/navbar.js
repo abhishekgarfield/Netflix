@@ -15,7 +15,6 @@ const Navbar = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setUser(data);
       });
   };
@@ -85,9 +84,8 @@ const Navbar = () => {
                   var el = document.querySelector(".search-cont");
                   el.classList.add("hello");
                   var el2 = document.querySelector("#searchstring");
-                  console.log(el2.value);
+                
                   if (el2.value.length > 0) {
-                    console.log(el2.value);
                     navigate(`/netflix/browse/search=${el2.value}`);
                     window.location.reload();
                   }
