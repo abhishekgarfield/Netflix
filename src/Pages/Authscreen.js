@@ -123,48 +123,8 @@ const AuthScreen = () => {
             </div>
           </div>
           <hr />
-          <div className="fourth-container">
-            <div className="second-info">
-              <h1>Watch everywhere.</h1>
-              <h2>
-                Stream unlimited movies and TV shows on your phone, tablet,
-                laptop, and TV.
-              </h2>
-            </div>
-            <div className="second-img">
-              <div className="image-container">
-                <img
-                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png"
-                  alt="tv"
-                />
-                <div className="video-container">
-                  <video autoPlay loop muted>
-                    <source
-                      src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
-                      type="video/mp4"
-                    />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
           <hr />
-          <div className="fifth-container">
-            <div className="second-img">
-              <div className="image-container">
-                <img
-                  src="https://occ.a.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABYjXrxZKtrzxQRVQNn2aIByoomnlbXmJ-uBy7du8a5Si3xqIsgerTlwJZG1vMpqer2kvcILy0UJQnjfRUQ5cEr7gQlYqXfxUg7bz.png?r=420"
-                  alt="tv"
-                />
-              </div>
-            </div>
-            <div className="second-info">
-              <h1>Download your shows to watch offline.</h1>
-              <h2>
-                Save your favourites easily and always have something to watch.
-              </h2>
-            </div>
-          </div>
+         
           <hr />
           <Frequent />
           <hr />

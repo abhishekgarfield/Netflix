@@ -38,7 +38,7 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
             setError(data.error);
             disptach(setIsloading(false));
           });
-        } else if (response.status == 200) {
+        } else if (response.status == 200) { 
           response.json().then((data) => {
             setCookie("authToken", data.token);
             setCookie("user_id", data.user_id);
