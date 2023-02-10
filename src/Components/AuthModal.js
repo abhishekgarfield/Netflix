@@ -33,7 +33,7 @@ const AuthModal = ({ isLogin, setislogin, isAuthmodal, setIsauthmodal }) => {
         headers: { "Content-type": "Application/json" },
         body: JSON.stringify({ user }),
       }).then((response) => {
-        if (response.status == 403) {
+        if (response.status == 403) { 
           response.json().then((data) => {
             setError(data.error);
             disptach(setIsloading(false));
